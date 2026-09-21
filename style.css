@@ -910,3 +910,137 @@ footer p {
         width: 92%;
     }
 }
+/* =========================================
+   NEWS & ANNOUNCEMENTS
+   ========================================= */
+
+.news-section {
+    background: #f5f9ff;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.section-intro .section-label {
+    color: #063b78;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.section-intro h2 {
+    color: #063b78;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-intro p {
+    color: #555;
+}
+
+/* NEWS GRID */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.news-image {
+    height: 140px;
+    background: #063b78;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-date {
+    color: #063b78;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.news-content h3 {
+    color: #063b78;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    color: #555;
+    font-size: 15px;
+}
+
+/* =========================================
+   NEWS NOTICE
+   ========================================= */
+
+.notice {
+    background: white;
+}
+
+.notice-box {
+    background: #063b78;
+    color: white;
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 10px;
+}
+
+.notice-box h2 {
+    margin-bottom: 10px;
+}
+
+.notice-box p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   NEWS MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .news-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-intro h2 {
+        font-size: 27px;
+    }
+}
