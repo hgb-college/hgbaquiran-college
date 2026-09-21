@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,152 +8,328 @@
     <title>HGBaquiran College</title>
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        html {
+            scroll-behavior: smooth;
         }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #24344d;
+            line-height: 1.6;
+            background: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1250px;
+            margin: auto;
+        }
+
 
         /* =========================
            HEADER
         ========================= */
 
         header {
-    background: #003b73;
-    color: white;
-    padding: 10px 0;
-    border-bottom: 4px solid #66b3ff;
-}
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
+            background: #063b78;
+            color: white;
+            height: 100px;
+            display: flex;
+            align-items: center;
         }
 
         .header-content {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
+        /* Logo */
+
         .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
 
-.logo img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-}
+        .logo img {
+            width: 78px;
+            height: 78px;
+            object-fit: contain;
 
-.logo h2 {
-    font-size: 24px;
-    color: white;
-}
+            /* Makes the white logo background blend into the header */
+            background: white;
+            border-radius: 50%;
+            padding: 4px;
+        }
 
-      nav a {
-    color: white;
-            text-decoration: none;
-            margin-left: 20px;
+        .logo-divider {
+            height: 60px;
+            width: 2px;
+            background: rgba(255,255,255,0.7);
+        }
+
+        .logo-text {
+            color: white;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 30px;
+            line-height: 1.05;
             font-weight: bold;
         }
 
+
+        /* Navigation */
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            position: relative;
+            padding: 38px 0;
+        }
+
         nav a:hover {
-            text-decoration: underline;
+            color: #6fc4ff;
+        }
+
+        nav a.active {
+            color: white;
+        }
+
+        nav a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 23px;
+            height: 3px;
+            background: #65c5ff;
         }
 
 
         /* =========================
-           HERO SECTION
+           HERO
         ========================= */
 
         .hero {
-    min-height: 600px;
+            min-height: 610px;
 
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.35)
-        ),
-        url("campus.jpg");
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 45, 91, 0.96) 0%,
+                    rgba(3, 45, 91, 0.82) 32%,
+                    rgba(3, 45, 91, 0.35) 62%,
+                    rgba(3, 45, 91, 0.05) 100%
+                ),
+                url("campus.jpg");
 
-    background-size: cover;
-    background-position: center;
+            background-size: cover;
+            background-position: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    color: white;
-}
+            display: flex;
+            align-items: center;
+        }
 
         .hero-content {
-            max-width: 800px;
+            width: 90%;
+            max-width: 1250px;
+            margin: auto;
+            color: white;
+        }
+
+        .hero-small-title {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
         }
 
         .hero h1 {
-            font-size: 50px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 65px;
+            line-height: 1.05;
+            max-width: 750px;
             margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
+            font-size: 21px;
+            max-width: 550px;
+            margin-bottom: 35px;
+            color: #eef7ff;
         }
 
-        .btn {
-    display: inline-block;
-    background: #0066b3;
-    color: white;
-    padding: 14px 28px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
 
-.btn:hover {
-    background: #004f8c;
-}
+            background: #0877dc;
+            color: white;
+
+            padding: 16px 28px;
+            border-radius: 12px;
+
+            font-weight: bold;
+            font-size: 16px;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: #0a91ff;
+            transform: translateY(-2px);
+        }
+
+        .arrow {
+            font-size: 22px;
+        }
 
 
         /* =========================
-           GENERAL SECTIONS
+           SECTION GENERAL
         ========================= */
 
         section {
-            padding: 70px 0;
+            padding: 80px 0;
         }
 
-        section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 32px;
-    color: #003b73;
-}
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            color: #0868c7;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+        .section-label::before {
+            content: "";
+            width: 40px;
+            height: 3px;
+            background: #5ebdff;
+        }
+
+        .section-title {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #063b78;
+            font-size: 42px;
+            line-height: 1.15;
+        }
 
 
         /* =========================
-           ABOUT SECTION
+           ABOUT
         ========================= */
 
         .about {
-            text-align: center;
+            background: white;
         }
 
-        .about p {
-            max-width: 800px;
-            margin: auto;
-            font-size: 18px;
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-top: 20px;
+            color: #596a82;
+            font-size: 17px;
+            max-width: 650px;
+        }
+
+        .learn-button {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            background: #086dcc;
+            color: white;
+
+            padding: 12px 24px;
+            border-radius: 7px;
+
+            font-weight: bold;
+        }
+
+        .learn-button:hover {
+            background: #075aa9;
+        }
+
+
+        /* About features */
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px 40px;
+
+            border-left: 1px solid #d9e3ef;
+            padding-left: 45px;
+        }
+
+        .feature {
+            display: flex;
+            gap: 18px;
+        }
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: #e3f3ff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #075fae;
+            font-size: 25px;
+        }
+
+        .feature h3 {
+            color: #064486;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .feature p {
+            color: #64748b;
+            font-size: 14px;
         }
 
 
@@ -163,71 +338,74 @@
         ========================= */
 
         .programs {
-            background: #f5f5f5;
+            background: #f2f8fd;
+            text-align: center;
+        }
+
+        .program-heading {
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        .program-title {
+            margin-top: 8px;
         }
 
         .program-grid {
+            margin-top: 40px;
+
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 28px;
+
+            text-align: left;
         }
 
         .program-card {
             background: white;
-            padding: 30px;
-            text-align: center;
-            border-radius: 8px;
+            padding: 28px;
+            border-radius: 12px;
 
             box-shadow:
-                0 3px 10px rgba(0, 0, 0, 0.1);
+                0 8px 25px rgba(18, 70, 110, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 15px 35px rgba(18, 70, 110, 0.13);
+        }
+
+        .program-icon {
+            width: 60px;
+            height: 60px;
+
+            border-radius: 50%;
+
+            background: #06448b;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
         }
 
         .program-card h3 {
-    color: #003b73;
-            margin-bottom: 15px;
-        }
-
-
-        /* =========================
-           NEWS
-        ========================= */
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 25px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            color: #003366;
+            color: #073f7c;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 20px;
             margin-bottom: 10px;
         }
 
-        .news-card a {
-            display: inline-block;
-            margin-top: 15px;
-            color: #003366;
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            background: #f5f5f5;
-            text-align: center;
-        }
-
-        .contact p {
-            margin: 8px 0;
+        .program-card p {
+            color: #64748b;
+            font-size: 15px;
         }
 
 
@@ -235,47 +413,138 @@
            FOOTER
         ========================= */
 
-       footer {
-    background: #003b73;
+        footer {
+            background: #063b78;
             color: white;
-            text-align: center;
-            padding: 25px 0;
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            color: #c9def1;
+            font-size: 14px;
         }
 
 
         /* =========================
-           MOBILE RESPONSIVE
+           MOBILE
         ========================= */
 
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
 
             .header-content {
                 flex-direction: column;
+                gap: 15px;
+            }
+
+            header {
+                height: auto;
+                padding: 15px 0;
             }
 
             nav {
-                margin-top: 15px;
-                text-align: center;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             nav a {
-                display: inline-block;
-                margin: 5px;
+                padding: 5px 0;
+            }
+
+            nav a.active::after {
+                bottom: -5px;
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 50px;
+            }
+
+            .about-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .logo-text {
+                font-size: 23px;
+            }
+
+            .logo img {
+                width: 65px;
+                height: 65px;
+            }
+
+            .logo-divider {
+                height: 50px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 550px;
+
+                background-image:
+                    linear-gradient(
+                        rgba(3, 45, 91, 0.75),
+                        rgba(3, 45, 91, 0.65)
+                    ),
+                    url("campus.jpg");
+
+                background-position: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
             }
 
             .hero p {
                 font-size: 18px;
             }
 
-            .program-grid,
-            .news-grid {
+            .section-title {
+                font-size: 34px;
+            }
+
+            .features {
                 grid-template-columns: 1fr;
             }
+
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
         }
+
     </style>
 </head>
 
@@ -285,23 +554,63 @@
 
     <!-- =========================
          HEADER
-    ========================== -->
+    ========================= -->
 
     <header>
 
         <div class="container header-content">
 
             <div class="logo">
-    <img src="logo.png" alt="HGBaquiran College Logo">
-    <h2>HGBaquiran College</h2>
-</div>
+
+                <img
+                    src="logo.png"
+                    alt="HGBaquiran College Logo"
+                >
+
+                <div class="logo-divider"></div>
+
+                <div class="logo-text">
+                    HGBaquiran<br>
+                    College
+                </div>
+
+            </div>
+
 
             <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#programs">Programs</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
+
+                <a href="#home" class="active">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About Us
+                </a>
+
+                <a href="#programs">
+                    Academic Programs
+                </a>
+
+                <a href="#admissions">
+                    Admissions
+                </a>
+
+                <a href="#faculty">
+                    Faculty
+                </a>
+
+                <a href="#news">
+                    News & Announcements
+                </a>
+
+                <a href="#events">
+                    Events
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
             </nav>
 
         </div>
@@ -312,23 +621,33 @@
 
     <!-- =========================
          HERO
-    ========================== -->
+    ========================= -->
 
     <section class="hero" id="home">
 
         <div class="hero-content">
 
+            <div class="hero-small-title">
+                WELCOME TO
+            </div>
+
             <h1>
-                Welcome to HGBaquiran College
+                HGBaquiran College
             </h1>
 
             <p>
-                Inspiring students through quality education,
-                knowledge, and excellence.
+                Quality education. Strong values.
+                A brighter future.
             </p>
 
-            <a href="#programs" class="btn">
+            <a href="#programs" class="hero-button">
+
                 Explore Our Programs
+
+                <span class="arrow">
+                    →
+                </span>
+
             </a>
 
         </div>
@@ -339,21 +658,142 @@
 
     <!-- =========================
          ABOUT
-    ========================== -->
+    ========================= -->
 
     <section class="about" id="about">
 
-        <div class="container">
+        <div class="container about-layout">
 
-            <h2>
-                About HGBaquiran College
-            </h2>
 
-            <p>
-                HGBaquiran College is committed to providing
-                students with quality education and opportunities
-                for personal, academic, and professional growth.
-            </p>
+            <div class="about-text">
+
+                <div class="section-label">
+                    About HGBaquiran College
+                </div>
+
+                <h2 class="section-title">
+                    Building Competent and
+                    Compassionate Professionals
+                </h2>
+
+                <p>
+                    HGBaquiran College is committed to
+                    providing quality education and
+                    opportunities for personal, academic,
+                    and professional growth.
+                </p>
+
+                <p>
+                    We aim to develop skilled, responsible,
+                    and value-driven individuals who will
+                    make a positive impact in their
+                    communities and the world.
+                </p>
+
+                <a href="#contact" class="learn-button">
+                    Learn More
+                    &nbsp; →
+                </a>
+
+            </div>
+
+
+
+            <div class="features">
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📖
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Quality Education
+                        </h3>
+
+                        <p>
+                            Relevant and
+                            industry-focused learning.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Supportive Community
+                        </h3>
+
+                        <p>
+                            A nurturing environment
+                            for every student.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🛡
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Values and Integrity
+                        </h3>
+
+                        <p>
+                            Character building
+                            for a better tomorrow.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📈
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Career Readiness
+                        </h3>
+
+                        <p>
+                            Equipping you for
+                            future success.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
 
         </div>
 
@@ -363,20 +803,29 @@
 
     <!-- =========================
          PROGRAMS
-    ========================== -->
+    ========================= -->
 
     <section class="programs" id="programs">
 
         <div class="container">
 
-            <h2>
+            <div class="section-label program-heading">
                 Our Programs
+            </div>
+
+            <h2 class="section-title program-title">
+                Choose Your Path
             </h2>
+
 
             <div class="program-grid">
 
 
                 <div class="program-card">
+
+                    <div class="program-icon">
+                        💻
+                    </div>
 
                     <h3>
                         Information Technology
@@ -394,6 +843,10 @@
 
                 <div class="program-card">
 
+                    <div class="program-icon">
+                        💼
+                    </div>
+
                     <h3>
                         Business Administration
                     </h3>
@@ -401,7 +854,7 @@
                     <p>
                         Build knowledge in business,
                         management, entrepreneurship,
-                        and organizational leadership.
+                        and leadership.
                     </p>
 
                 </div>
@@ -409,6 +862,10 @@
 
 
                 <div class="program-card">
+
+                    <div class="program-icon">
+                        🎓
+                    </div>
 
                     <h3>
                         Education
@@ -431,77 +888,107 @@
 
 
     <!-- =========================
+         ADMISSIONS
+    ========================= -->
+
+    <section id="admissions">
+
+        <div class="container">
+
+            <div class="section-label">
+                Admissions
+            </div>
+
+            <h2 class="section-title">
+                Begin Your Journey
+            </h2>
+
+            <p style="margin-top: 20px; color: #64748b;">
+                Admission information, requirements,
+                enrollment procedures, and important
+                dates can be placed here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FACULTY
+    ========================= -->
+
+    <section id="faculty" style="background: #f2f8fd;">
+
+        <div class="container">
+
+            <div class="section-label">
+                Our Faculty
+            </div>
+
+            <h2 class="section-title">
+                Dedicated Educators
+            </h2>
+
+            <p style="margin-top: 20px; color: #64748b;">
+                Faculty profiles and department information
+                can be added here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
          NEWS
-    ========================== -->
+    ========================= -->
 
     <section id="news">
 
         <div class="container">
 
-            <h2>
-                Latest News
+            <div class="section-label">
+                News & Announcements
+            </div>
+
+            <h2 class="section-title">
+                What's Happening
             </h2>
 
-            <div class="news-grid">
+            <p style="margin-top: 20px; color: #64748b;">
+                College announcements, news, and updates
+                can be displayed here.
+            </p>
 
+        </div>
 
-                <div class="news-card">
-
-                    <h3>
-                        Enrollment Information
-                    </h3>
-
-                    <p>
-                        Information about enrollment and
-                        admission will be posted here.
-                    </p>
-
-                    <a href="#">
-                        Read More
-                    </a>
-
-                </div>
+    </section>
 
 
 
-                <div class="news-card">
+    <!-- =========================
+         EVENTS
+    ========================= -->
 
-                    <h3>
-                        College Events
-                    </h3>
+    <section id="events" style="background: #f2f8fd;">
 
-                    <p>
-                        Stay updated with upcoming
-                        activities and events.
-                    </p>
+        <div class="container">
 
-                    <a href="#">
-                        Read More
-                    </a>
-
-                </div>
-
-
-
-                <div class="news-card">
-
-                    <h3>
-                        College Announcements
-                    </h3>
-
-                    <p>
-                        Important announcements from
-                        HGBaquiran College will appear here.
-                    </p>
-
-                    <a href="#">
-                        Read More
-                    </a>
-
-                </div>
-
-
+            <div class="section-label">
+                Events
             </div>
+
+            <h2 class="section-title">
+                Upcoming Events
+            </h2>
+
+            <p style="margin-top: 20px; color: #64748b;">
+                Upcoming college activities and events
+                can be displayed here.
+            </p>
 
         </div>
 
@@ -511,26 +998,23 @@
 
     <!-- =========================
          CONTACT
-    ========================== -->
+    ========================= -->
 
-    <section class="contact" id="contact">
+    <section id="contact">
 
         <div class="container">
 
-            <h2>
-                Contact HGBaquiran College
+            <div class="section-label">
+                Contact
+            </div>
+
+            <h2 class="section-title">
+                Get in Touch
             </h2>
 
-            <p>
-                Email: hgbaquirancollege2005@gmail.com
-            </p>
-
-            <p>
-                Phone: 078-258-2601
-            </p>
-
-            <p>
-                Address: CENTRO 1, TUMAUINI, ISABELA 3325
+            <p style="margin-top: 20px; color: #64748b;">
+                Add the official HGBaquiran College
+                contact information here.
             </p>
 
         </div>
@@ -541,16 +1025,20 @@
 
     <!-- =========================
          FOOTER
-    ========================== -->
+    ========================= -->
 
     <footer>
 
-        <div class="container">
+        <div class="container footer-content">
 
-            <p>
+            <div class="footer-logo">
+                HGBaquiran College
+            </div>
+
+            <div class="footer-text">
                 © 2026 HGBaquiran College.
                 All Rights Reserved.
-            </p>
+            </div>
 
         </div>
 
@@ -560,4 +1048,3 @@
 </body>
 
 </html>
-```
