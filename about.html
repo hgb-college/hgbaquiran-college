@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | HGBaquiran College</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #24344d;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #063b78;
+            color: white;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        .logo-divider {
+            width: 2px;
+            height: 55px;
+            background: rgba(255,255,255,0.7);
+        }
+
+        .logo-text {
+            color: white;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 25px;
+            line-height: 1.1;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #6fc4ff;
+        }
+
+        /* PAGE HERO */
+
+        .page-hero {
+            background:
+                linear-gradient(
+                    rgba(3, 45, 91, 0.85),
+                    rgba(3, 45, 91, 0.85)
+                ),
+                url("campus.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: #dceeff;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #063b78;
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+
+        .section-label {
+            color: #0870cc;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        /* MISSION / VISION */
+
+        .mission-vision {
+            background: #f2f8fd;
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border-top: 5px solid #0877dc;
+            box-shadow: 0 8px 25px rgba(18,70,110,0.08);
+        }
+
+        .card h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #063b78;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            color: #596a82;
+        }
+
+        .card li {
+            color: #596a82;
+            margin-bottom: 18px;
+        }
+
+        /* CORE VALUES */
+
+        .values-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .values-subtitle {
+            color: #0877dc;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .value {
+            background: #f2f8fd;
+            padding: 30px;
+            border-left: 5px solid #0877dc;
+            border-radius: 10px;
+        }
+
+        .value-letter {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #0877dc;
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        .value h3 {
+            color: #063b78;
+            margin: 5px 0 10px;
+        }
+
+        .value p {
+            color: #596a82;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #063b78;
+            color: white;
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            color: #c9def1;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 900px) {
+
+            .header-content {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            header {
+                height: auto;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width: 600px) {
+
+            .page-hero h1 {
+                font-size: 40px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container header-content">
+
+        <div class="logo">
+
+            <img src="logo.png" alt="HGBaquiran College Logo">
+
+            <div class="logo-divider"></div>
+
+            <div class="logo-text">
+                HGBaquiran<br>
+                College
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="programs.html">Programs</a>
+
+            <a href="admissions.html">Admissions</a>
+
+            <a href="news.html">News</a>
+
+            <a href="events.html">Events</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- PAGE TITLE -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <h1>About HGBaquiran College</h1>
+
+        <p>
+            Mission, Vision, and Core Values
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MISSION & VISION -->
+
+<section class="mission-vision">
+
+    <div class="container">
+
+        <div class="mission-vision-grid">
+
+
+            <!-- MISSION -->
+
+            <div class="card">
+
+                <h2>Mission</h2>
+
+                <p style="margin-bottom:20px;">
+                    HGBaquiran College is committed to:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Provide <strong>Quality and Learner-centered
+                        Institution</strong> that develops competent
+                        and future-ready graduates.
+                    </li>
+
+                    <li>
+                        Promote <strong>Relevant Research and
+                        Innovation</strong> that contribute to
+                        knowledge and societal development; and
+                    </li>
+
+                    <li>
+                        Engage in <strong>Responsive Community
+                        Service and Partnership</strong> that
+                        improve lives and strengthen communities.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- VISION -->
+
+            <div class="card">
+
+                <h2>Vision</h2>
+
+                <p style="font-size:18px; line-height:1.8;">
+
+                    HGBaquiran College is one of the leading
+                    private institutions in the Cagayan Valley
+                    Region with growing global recognition for
+                    <strong>Excellence, Innovation, and
+                    Transformation service.</strong>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CORE VALUES -->
+
+<section>
+
+    <div class="container">
+
+        <div class="values-header">
+
+            <div class="section-label">
+                What We Stand For
+            </div>
+
+            <h2 class="section-title">
+                Core Values
+            </h2>
+
+            <div class="values-subtitle">
+                E.X.C.E.L.S
+            </div>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <div class="value">
+
+                <div class="value-letter">E</div>
+
+                <h3>Excellence</h3>
+
+                <p>
+                    We pursue the highest standards in
+                    instruction, research, and service.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-letter">X</div>
+
+                <h3>eXcellence in Character</h3>
+
+                <p>
+                    We uphold integrity and ethical behavior.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-letter">C</div>
+
+                <h3>Commitment</h3>
+
+                <p>
+                    We are dedicated to our mission and
+                    responsibilities.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-letter">E</div>
+
+                <h3>Engagement</h3>
+
+                <p>
+                    We collaborate with stakeholders and
+                    communities.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-letter">L</div>
+
+                <h3>Leadership</h3>
+
+                <p>
+                    We develop leaders who created positive
+                    change.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-letter">S</div>
+
+                <h3>Stewardship</h3>
+
+                <p>
+                    We responsibly care for our resources,
+                    our people, and our future.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div class="footer-title">
+            HGBaquiran College
+        </div>
+
+        <div class="footer-text">
+            © 2026 HGBaquiran College. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
