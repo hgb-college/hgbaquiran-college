@@ -1455,3 +1455,14 @@ footer p {
     }
 
 }
+.contact-card a,
+.details-box a {
+    color: #063b78;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-card a:hover,
+.details-box a:hover {
+    text-decoration: underline;
+}
