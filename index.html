@@ -26,10 +26,11 @@
         ========================= */
 
         header {
-            background: #003366;
-            color: white;
-            padding: 20px 0;
-        }
+    background: white;
+    color: #176b45;
+    padding: 10px 0;
+    border-bottom: 3px solid #176b45;
+}
 
         .container {
             width: 90%;
@@ -43,12 +44,25 @@
             align-items: center;
         }
 
-        .logo h2 {
-            font-size: 24px;
-        }
+        .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        nav a {
-            color: white;
+.logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: #176b45;
+}
+
+       nav a {
+    color: #176b45;
             text-decoration: none;
             margin-left: 20px;
             font-weight: bold;
@@ -99,14 +113,14 @@
         }
 
         .btn {
-            display: inline-block;
-            background: #f4b400;
-            color: #111;
-            padding: 14px 28px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+    display: inline-block;
+    background: #c83b3b;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
         .btn:hover {
             background: #ffc928;
@@ -222,7 +236,7 @@
         ========================= */
 
         footer {
-            background: #003366;
+    background: #176b45;
             color: white;
             text-align: center;
             padding: 25px 0;
@@ -278,8 +292,9 @@
         <div class="container header-content">
 
             <div class="logo">
-                <h2>HGBaquiran College</h2>
-            </div>
+    <img src="logo.png" alt="HGBaquiran College Logo">
+    <h2>HGBaquiran College</h2>
+</div>
 
             <nav>
                 <a href="#home">Home</a>
