@@ -638,3 +638,99 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+/* =========================================
+   ACADEMIC PROGRAMS
+   ========================================= */
+
+.programs {
+    background: #f5f9ff;
+}
+
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 45px;
+}
+
+.intro-label {
+    color: #063b78;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.intro h2 {
+    color: #063b78;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.intro p {
+    color: #555;
+    font-size: 16px;
+}
+
+.program-group {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.program-group-header {
+    background: #063b78;
+    color: white;
+    padding: 18px 25px;
+}
+
+.program-group-header h3 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.program-group-content {
+    padding: 25px;
+}
+
+.program-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.program-card {
+    background: #f5f9ff;
+    border-left: 5px solid #063b78;
+    padding: 18px 20px;
+    border-radius: 6px;
+}
+
+.program-code {
+    color: #063b78;
+    font-weight: bold;
+    display: block;
+}
+
+/* PROGRAMS MOBILE */
+
+@media (max-width: 700px) {
+
+    .intro h2 {
+        font-size: 27px;
+    }
+
+    .program-list {
+        grid-template-columns: 1fr;
+    }
+
+    .program-group-header h3 {
+        font-size: 18px;
+    }
+
+    .program-group-content {
+        padding: 18px;
+    }
+}
