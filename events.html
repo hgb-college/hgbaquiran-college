@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | HGBaquiran College</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f5f9ff;
+        }
+
+        /* HEADER */
+        header {
+            background: #063b78;
+            color: white;
+            padding: 12px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        .logo-area h1 {
+            font-size: 22px;
+        }
+
+        .logo-area p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 9px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: white;
+            color: #063b78;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 280px;
+            background:
+                linear-gradient(rgba(0, 45, 95, 0.72), rgba(0, 45, 95, 0.72)),
+                url("campus.jpg") center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* MAIN */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            color: #063b78;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #555;
+        }
+
+        /* EVENT CARDS */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid #063b78;
+            transition: transform 0.2s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-date {
+            background: #e8f2ff;
+            color: #063b78;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .event-date .month {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .event-date .day {
+            display: block;
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .event-content {
+            padding: 22px;
+        }
+
+        .event-content h3 {
+            color: #063b78;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .event-content p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .event-status {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #555;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        /* INFORMATION SECTION */
+        .info-box {
+            margin-top: 50px;
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+
+        .info-box h2 {
+            color: #063b78;
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            color: #555;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #032d5b;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 60px;
+        }
+
+        footer h3 {
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 950px) {
+            header {
+                flex-direction: column;
+            }
+
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .logo-area {
+                text-align: center;
+            }
+
+            .logo-area h1 {
+                font-size: 18px;
+            }
+
+            nav ul {
+                gap: 4px;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 7px 8px;
+                font-size: 12px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo-area">
+            <img src="logo.png" alt="HGBaquiran College Logo">
+
+            <div>
+                <h1>HGBaquiran College</h1>
+                <p>Excellence • Innovation • Transformation</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <h2>College Events</h2>
+            <p>Discover activities, programs, and events at HGBaquiran College.</p>
+        </div>
+    </section>
+
+
+    <!-- EVENTS -->
+    <main class="container">
+
+        <div class="section-title">
+            <h2>Upcoming Events</h2>
+            <p>Official college events and activities will be posted here.</p>
+        </div>
+
+
+        <div class="events-grid">
+
+            <!-- EVENT 1 -->
+            <div class="event-card">
+
+                <div class="event-date">
+                    <span class="month">Date</span>
+                    <span class="day">--</span>
+                </div>
+
+                <div class="event-content">
+                    <h3>Academic Events</h3>
+
+                    <p>
+                        Information about academic activities, seminars,
+                        conferences, and other educational events will be
+                        posted here.
+                    </p>
+
+                    <span class="event-status">
+                        Details to be announced
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 2 -->
+            <div class="event-card">
+
+                <div class="event-date">
+                    <span class="month">Date</span>
+                    <span class="day">--</span>
+                </div>
+
+                <div class="event-content">
+                    <h3>Student Activities</h3>
+
+                    <p>
+                        Student activities, organizations, competitions,
+                        and campus programs can be featured in this section.
+                    </p>
+
+                    <span class="event-status">
+                        Details to be announced
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 3 -->
+            <div class="event-card">
+
+                <div class="event-date">
+                    <span class="month">Date</span>
+                    <span class="day">--</span>
+                </div>
+
+                <div class="event-content">
+                    <h3>College Activities</h3>
+
+                    <p>
+                        Important college-wide activities and institutional
+                        events can be displayed here.
+                    </p>
+
+                    <span class="event-status">
+                        Details to be announced
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 4 -->
+            <div class="event-card">
+
+                <div class="event-date">
+                    <span class="month">Date</span>
+                    <span class="day">--</span>
+                </div>
+
+                <div class="event-content">
+                    <h3>Community Activities</h3>
+
+                    <p>
+                        Community outreach, partnerships, and service
+                        activities can be posted here.
+                    </p>
+
+                    <span class="event-status">
+                        Details to be announced
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 5 -->
+            <div class="event-card">
+
+                <div class="event-date">
+                    <span class="month">Date</span>
+                    <span class="day">--</span>
+                </div>
+
+                <div class="event-content">
+                    <h3>Special Events</h3>
+
+                    <p>
+                        Special celebrations, institutional programs,
+                        and other important occasions can be listed here.
+                    </p>
+
+                    <span class="event-status">
+                        Details to be announced
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 6 -->
+            <div class="event-card">
+
+                <div class="event-date">
+                    <span class="month">Date</span>
+                    <span class="day">--</span>
+                </div>
+
+                <div class="event-content">
+                    <h3>Announcements</h3>
+
+                    <p>
+                        Important announcements related to upcoming
+                        activities will be published on this page.
+                    </p>
+
+                    <span class="event-status">
+                        Check for updates
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- INFORMATION -->
+        <section class="info-box">
+
+            <h2>Stay Updated</h2>
+
+            <p>
+                This page can be updated with official event dates,
+                schedules, venues, registration information, and other
+                announcements from HGBaquiran College.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>HGBaquiran College</h3>
+
+        <p>
+            © 2026 HGBaquiran College. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
