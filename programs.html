@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academic Programs | HGBaquiran College</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #24344d;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #063b78;
+            color: white;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        .logo-divider {
+            width: 2px;
+            height: 55px;
+            background: rgba(255,255,255,0.7);
+        }
+
+        .logo-text {
+            color: white;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 25px;
+            line-height: 1.1;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #6fc4ff;
+        }
+
+        /* ================= PAGE HERO ================= */
+
+        .page-hero {
+            background:
+                linear-gradient(
+                    rgba(3, 45, 91, 0.85),
+                    rgba(3, 45, 91, 0.85)
+                ),
+                url("campus.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: #dceeff;
+        }
+
+        /* ================= PROGRAMS ================= */
+
+        .programs {
+            padding: 80px 0;
+            background: #f2f8fd;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .intro-label {
+            color: #0870cc;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .intro h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #063b78;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #596a82;
+            font-size: 17px;
+        }
+
+        /* PROGRAM GROUP */
+
+        .program-group {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(18,70,110,0.08);
+        }
+
+        .program-group-header {
+            background: #063b78;
+            color: white;
+            padding: 25px 30px;
+        }
+
+        .program-group-header h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 27px;
+        }
+
+        .program-group-content {
+            padding: 30px;
+        }
+
+        .program-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .program-card {
+            border: 1px solid #dce8f2;
+            border-radius: 9px;
+            padding: 22px;
+
+            background: #fbfdff;
+
+            transition: 0.3s;
+        }
+
+        .program-card:hover {
+            border-color: #0877dc;
+            background: #eef8ff;
+            transform: translateY(-3px);
+        }
+
+        .program-code {
+            display: block;
+            color: #0877dc;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .program-description {
+            color: #596a82;
+            font-size: 15px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #063b78;
+            color: white;
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            color: #c9def1;
+            font-size: 14px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 900px) {
+
+            .header-content {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            header {
+                height: auto;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .program-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .page-hero h1 {
+                font-size: 40px;
+            }
+
+            .intro h2 {
+                font-size: 34px;
+            }
+
+            .program-group-header h3 {
+                font-size: 22px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="container header-content">
+
+        <div class="logo">
+
+            <img src="logo.png" alt="HGBaquiran College Logo">
+
+            <div class="logo-divider"></div>
+
+            <div class="logo-text">
+                HGBaquiran<br>
+                College
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="programs.html">Programs</a>
+
+            <a href="admissions.html">Admissions</a>
+
+            <a href="news.html">News</a>
+
+            <a href="events.html">Events</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <h1>Academic Programs</h1>
+
+        <p>
+            Explore the academic programs offered by
+            HGBaquiran College.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROGRAMS ================= -->
+
+<section class="programs">
+
+    <div class="container">
+
+
+        <div class="intro">
+
+            <div class="intro-label">
+                HGBaquiran College
+            </div>
+
+            <h2>
+                Our Academic Programs
+            </h2>
+
+            <p>
+                HGBaquiran College offers programs across
+                hospitality management, teacher education,
+                information technology, business administration,
+                and criminal justice education.
+            </p>
+
+        </div>
+
+
+        <!-- ================= BSHM ================= -->
+
+        <div class="program-group">
+
+            <div class="program-group-header">
+
+                <h3>
+                    Hospitality Management
+                </h3>
+
+            </div>
+
+            <div class="program-group-content">
+
+                <div class="program-list">
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            BSHM
+                        </span>
+
+                        <div class="program-description">
+                            Bachelor of Science in Hospitality
+                            Management
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CTED ================= -->
+
+        <div class="program-group">
+
+            <div class="program-group-header">
+
+                <h3>
+                    College of Teacher Education (CTED)
+                </h3>
+
+            </div>
+
+            <div class="program-group-content">
+
+                <div class="program-list">
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            BEED
+                        </span>
+
+                    </div>
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            BSED
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= IT ================= -->
+
+        <div class="program-group">
+
+            <div class="program-group-header">
+
+                <h3>
+                    Information Technology
+                </h3>
+
+            </div>
+
+            <div class="program-group-content">
+
+                <div class="program-list">
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            ACT
+                        </span>
+
+                    </div>
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            BSIT
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= BUSINESS ================= -->
+
+        <div class="program-group">
+
+            <div class="program-group-header">
+
+                <h3>
+                    Business Administration
+                </h3>
+
+            </div>
+
+            <div class="program-group-content">
+
+                <div class="program-list">
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            BSBA
+                        </span>
+
+                        <div class="program-description">
+                            Major in Financial Management (FM)
+                        </div>
+
+                    </div>
+
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            BSBA
+                        </span>
+
+                        <div class="program-description">
+                            Major in Marketing Management (MM)
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CRIMINAL JUSTICE ================= -->
+
+        <div class="program-group">
+
+            <div class="program-group-header">
+
+                <h3>
+                    College of Criminal Justice Education
+                </h3>
+
+            </div>
+
+            <div class="program-group-content">
+
+                <div class="program-list">
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            BSCRIM
+                        </span>
+
+                    </div>
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            BSLEA
+                        </span>
+
+                    </div>
+
+                    <div class="program-card">
+
+                        <span class="program-code">
+                            BSISM
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div class="footer-title">
+            HGBaquiran College
+        </div>
+
+        <div class="footer-text">
+            © 2026 HGBaquiran College.
+            All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
