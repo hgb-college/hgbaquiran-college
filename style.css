@@ -1296,3 +1296,68 @@ footer p {
         padding: 25px;
     }
 }
+/* =========================================
+   FACULTY & STAFF PAGE
+   ========================================= */
+
+.staff-section {
+    margin-bottom: 50px;
+}
+
+.staff-section > h2 {
+    color: #063b78;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.staff-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.staff-photo {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #e8f2ff;
+    color: #063b78;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.staff-card h3 {
+    color: #063b78;
+    margin-bottom: 6px;
+}
+
+.position {
+    color: #666;
+    font-size: 14px;
+}
+
+/* FACULTY & STAFF MOBILE */
+
+@media (max-width: 800px) {
+    .staff-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+}
