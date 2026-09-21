@@ -1301,15 +1301,26 @@ footer p {
    ========================================= */
 
 .staff-section {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 
-.staff-section > h2 {
-    color: #063b78;
+.staff-section-header {
     text-align: center;
-    font-size: 28px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
+
+.staff-section-header .section-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.staff-section-header h2 {
+    color: #063b78;
+    font-size: 30px;
+}
+
+
+/* STAFF GRID */
 
 .staff-grid {
     display: grid;
@@ -1317,47 +1328,130 @@ footer p {
     gap: 25px;
 }
 
+.leadership-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* STAFF CARD */
+
 .staff-card {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
+    padding: 30px 25px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.staff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+
+/* PHOTO PLACEHOLDER */
 
 .staff-photo {
     width: 130px;
     height: 130px;
-    margin: 0 auto 18px;
+    margin: 0 auto 20px;
+
     border-radius: 50%;
+
     background: #e8f2ff;
+    border: 4px solid #063b78;
+
     color: #063b78;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* STAFF INFORMATION */
+
+.staff-info {
+    max-width: 100%;
+}
+
+.staff-role {
+    display: block;
+
+    color: #063b78;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    margin-bottom: 8px;
 }
 
 .staff-card h3 {
-    color: #063b78;
-    margin-bottom: 6px;
+    color: #222;
+
+    font-size: 18px;
+    line-height: 1.4;
+
+    margin: 0;
 }
 
-.position {
-    color: #666;
-    font-size: 14px;
+
+/* LEADERSHIP */
+
+.leadership-card {
+    padding: 35px 25px;
 }
 
-/* FACULTY & STAFF MOBILE */
+.leadership-card .staff-photo {
+    width: 145px;
+    height: 145px;
+}
 
-@media (max-width: 800px) {
-    .staff-grid {
+
+/* SINGLE STAFF CARD */
+
+.staff-grid-single {
+    grid-template-columns: minmax(250px, 360px);
+    justify-content: center;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .staff-grid,
+    .leadership-grid {
         grid-template-columns: 1fr 1fr;
     }
+
 }
 
+
 @media (max-width: 700px) {
-    .staff-grid {
+
+    .staff-grid,
+    .leadership-grid {
         grid-template-columns: 1fr;
     }
+
+    .staff-grid-single {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-card {
+        padding: 25px 20px;
+    }
+
+    .staff-section-header h2 {
+        font-size: 26px;
+    }
+
 }
