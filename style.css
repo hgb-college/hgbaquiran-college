@@ -734,3 +734,179 @@ footer p {
         padding: 18px;
     }
 }
+/* =========================================
+   ADMISSIONS
+   ========================================= */
+
+.intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.intro-label {
+    color: #063b78;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.intro h2 {
+    color: #063b78;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* =========================================
+   ADMISSION STEPS
+   ========================================= */
+
+.steps-section {
+    background: white;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: #f5f9ff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 4px solid #063b78;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #063b78;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.step h3 {
+    color: #063b78;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #555;
+    font-size: 15px;
+}
+
+/* =========================================
+   REQUIREMENTS
+   ========================================= */
+
+.requirements {
+    background: #f5f9ff;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.requirement-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    border-left: 5px solid #063b78;
+}
+
+.requirement-card h3 {
+    color: #063b78;
+    margin-bottom: 10px;
+}
+
+.requirement-card p {
+    color: #555;
+}
+
+/* =========================================
+   ADMISSION CTA
+   ========================================= */
+
+.admission-cta {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px 30px;
+    background: #063b78;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.admission-cta h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.admission-cta p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #063b78;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background: #e8f2ff;
+}
+
+/* =========================================
+   ADMISSIONS MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .steps-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h2 {
+        font-size: 27px;
+    }
+
+    .admission-cta {
+        width: 92%;
+    }
+}
