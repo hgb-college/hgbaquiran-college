@@ -1044,3 +1044,125 @@ footer p {
         font-size: 27px;
     }
 }
+/* =========================================
+   EVENTS
+   ========================================= */
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.event-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.event-date {
+    min-width: 100px;
+    background: #063b78;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.event-date .month {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.event-date .day {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.event-content {
+    padding: 25px;
+}
+
+.event-content h3 {
+    color: #063b78;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.event-content p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.event-status {
+    display: inline-block;
+    background: #e8f2ff;
+    color: #063b78;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* =========================================
+   EVENTS INFORMATION BOX
+   ========================================= */
+
+.info-box {
+    background: #063b78;
+    color: white;
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.info-box h2 {
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   EVENTS MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        min-width: 0;
+        padding: 12px;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .event-date .day {
+        font-size: 22px;
+    }
+
+    .event-content {
+        padding: 20px;
+    }
+}
