@@ -639,102 +639,283 @@ footer p {
     }
 }
 /* =========================================
-   ACADEMIC PROGRAMS
+   PROGRAMS PAGE - STAGE 1
    ========================================= */
 
-.programs {
-    background: #f5f9ff;
-}
-
-.intro {
+.programs-intro {
+    max-width: 850px;
+    margin: 0 auto 60px;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto 45px;
 }
 
-.intro-label {
-    color: #063b78;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-}
-
-.intro h2 {
+.programs-intro h2 {
     color: #063b78;
     font-size: 32px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
-.intro p {
+.programs-intro p {
     color: #555;
     font-size: 16px;
 }
 
-.program-group {
-    background: white;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+/* PROGRAM CATEGORY */
+
+.program-category {
+    margin-bottom: 65px;
 }
 
-.program-group-header {
+.program-category-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #dce9f7;
+}
+
+.program-category-number {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+
     background: #063b78;
     color: white;
-    padding: 18px 25px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.program-group-header h3 {
+.program-category-header h2 {
+    color: #063b78;
+    font-size: 25px;
     margin: 0;
-    font-size: 21px;
 }
 
-.program-group-content {
-    padding: 25px;
-}
 
-.program-list {
+/* PROGRAM CARDS */
+
+.program-showcase {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .program-card {
-    background: #f5f9ff;
-    border-left: 5px solid #063b78;
-    padding: 18px 20px;
-    border-radius: 6px;
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    border: 1px solid #e5edf7;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 250px;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+
+/* PROGRAM CODE */
+
+.program-card-top {
+    margin-bottom: 18px;
 }
 
 .program-code {
+    display: inline-block;
+
+    background: #e8f2ff;
     color: #063b78;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
     font-weight: bold;
-    display: block;
 }
 
-/* PROGRAMS MOBILE */
+
+/* PROGRAM TITLE */
+
+.program-card h3 {
+    color: #063b78;
+
+    font-size: 20px;
+    line-height: 1.35;
+
+    margin-bottom: 12px;
+}
+
+.program-card p {
+    color: #555;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* PROGRAM FOOTER */
+
+.program-footer {
+    margin-top: auto;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #e5e5e5;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+.program-footer span:last-child {
+    color: #063b78;
+    font-weight: bold;
+}
+
+
+/* FEATURED PROGRAM */
+
+.featured-program {
+    grid-column: span 1;
+}
+
+
+/* PROGRAM INFORMATION CTA */
+
+.program-information {
+    background: #063b78;
+    color: white;
+
+    border-radius: 12px;
+
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 20px;
+}
+
+.program-information .section-label {
+    color: white;
+}
+
+.program-information h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.program-information p {
+    max-width: 700px;
+    opacity: 0.9;
+}
+
+.program-cta {
+    display: inline-block;
+
+    background: white;
+    color: #063b78;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+.program-cta:hover {
+    background: #e8f2ff;
+}
+
+
+/* PROGRAMS RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .program-showcase {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .program-information {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
 
 @media (max-width: 700px) {
 
-    .intro h2 {
+    .programs-intro h2 {
         font-size: 27px;
     }
 
-    .program-list {
+    .program-category-header {
+        align-items: flex-start;
+    }
+
+    .program-category-header h2 {
+        font-size: 22px;
+    }
+
+    .program-showcase {
         grid-template-columns: 1fr;
     }
 
-    .program-group-header h3 {
-        font-size: 18px;
+    .program-card {
+        min-height: auto;
     }
 
-    .program-group-content {
-        padding: 18px;
+    .program-information {
+        padding: 30px 22px;
     }
-}
-/* =========================================
+
+    .program-information h2 {
+        font-size: 24px;
+    }
+
+    .program-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+}/* =========================================
    ADMISSIONS
    ========================================= */
 
