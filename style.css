@@ -1,7 +1,12 @@
-/* =========================================
+/* =========================================================
    HGBaquiran College
    Main Website Stylesheet
-   ========================================= */
+   ========================================================= */
+
+
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
 
 * {
     margin: 0;
@@ -9,8 +14,12 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #222;
     background: #f5f9ff;
@@ -18,11 +27,12 @@ body {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
-/* =========================================
-   GENERAL
-   ========================================= */
+a {
+    transition: 0.2s ease;
+}
 
 .container {
     width: 90%;
@@ -31,31 +41,29 @@ img {
 }
 
 section {
-    padding: 50px 0;
+    padding: 55px 0;
 }
 
-a {
-    transition: 0.2s;
-}
 
-/* =========================================
+/* =========================================================
    HEADER
-   ========================================= */
+   ========================================================= */
 
 header {
     background: #063b78;
     color: white;
-    padding: 12px 6%;
-}
-
-.header-content {
+    padding: 12px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 100;
 }
 
-/* INDEX HEADER */
+
+/* LOGO AREA - INDEX / CONTACT / EVENTS / FACULTY */
 
 .logo-area {
     display: flex;
@@ -74,6 +82,7 @@ header {
 
 .logo-area h1 {
     font-size: 22px;
+    line-height: 1.2;
 }
 
 .logo-area p {
@@ -81,7 +90,8 @@ header {
     opacity: 0.9;
 }
 
-/* ABOUT / OTHER PAGES HEADER */
+
+/* LOGO - ABOUT / PROGRAMS / ADMISSIONS / NEWS */
 
 .logo {
     display: flex;
@@ -110,25 +120,42 @@ header {
     line-height: 1.2;
 }
 
-/* =========================================
+
+/* HEADER CONTENT */
+
+.header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* =========================================================
    NAVIGATION
-   ========================================= */
+   ========================================================= */
+
+nav {
+    margin-left: auto;
+}
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
+    display: block;
     color: white;
     text-decoration: none;
-    padding: 9px 12px;
-    border-radius: 5px;
+    padding: 9px 11px;
+    border-radius: 6px;
     font-size: 14px;
-    display: block;
 }
 
 nav ul li a:hover,
@@ -137,20 +164,24 @@ nav ul li a.active {
     color: #063b78;
 }
 
+
+/* MOBILE MENU BUTTON */
+
 .menu-toggle {
     display: none;
     background: transparent;
     border: 2px solid white;
     color: white;
-    font-size: 25px;
+    font-size: 24px;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-/* =========================================
-   HOME HERO
-   ========================================= */
+
+/* =========================================================
+   HERO - HOME
+   ========================================================= */
 
 .hero {
     min-height: 430px;
@@ -160,7 +191,7 @@ nav ul li a.active {
             rgba(0, 45, 95, 0.72),
             rgba(0, 45, 95, 0.72)
         ),
-        url("campus.jpg") center/cover;
+        url("campus.jpg") center center / cover no-repeat;
 
     display: flex;
     align-items: center;
@@ -168,7 +199,12 @@ nav ul li a.active {
 
     text-align: center;
     color: white;
-    padding: 60px 20px;
+
+    padding: 70px 20px;
+}
+
+.hero > div {
+    max-width: 900px;
 }
 
 .hero-content {
@@ -177,7 +213,8 @@ nav ul li a.active {
 
 .hero h2 {
     font-size: 42px;
-    margin-bottom: 10px;
+    line-height: 1.2;
+    margin-bottom: 12px;
 }
 
 .hero h3 {
@@ -191,16 +228,21 @@ nav ul li a.active {
     margin: 0 auto 25px;
 }
 
+
+/* HERO BUTTONS */
+
 .hero-buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 12px;
     flex-wrap: wrap;
 }
 
-/* =========================================
+
+/* =========================================================
    PAGE HERO
-   ========================================= */
+   ========================================================= */
 
 .page-hero {
     background:
@@ -208,15 +250,17 @@ nav ul li a.active {
             rgba(0, 45, 95, 0.78),
             rgba(0, 45, 95, 0.78)
         ),
-        url("campus.jpg") center/cover;
+        url("campus.jpg") center center / cover no-repeat;
 
     color: white;
     text-align: center;
-    padding: 70px 20px;
+
+    padding: 75px 20px;
 }
 
 .page-hero h1 {
     font-size: 40px;
+    line-height: 1.2;
     margin-bottom: 10px;
 }
 
@@ -224,28 +268,46 @@ nav ul li a.active {
     font-size: 18px;
 }
 
-/* =========================================
+
+/* =========================================================
    SECTION TITLES
-   ========================================= */
+   ========================================================= */
 
 .section-title {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .section-title h2 {
     color: #063b78;
     font-size: 30px;
-    margin-bottom: 8px;
+    line-height: 1.3;
+    margin-bottom: 10px;
 }
 
 .section-title p {
     color: #555;
 }
 
-/* =========================================
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.section-label {
+    display: block;
+    color: #063b78;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
    BUTTONS
-   ========================================= */
+   ========================================================= */
 
 .btn {
     display: inline-block;
@@ -253,7 +315,6 @@ nav ul li a.active {
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.2s;
 }
 
 .btn-primary {
@@ -275,14 +336,15 @@ nav ul li a.active {
     color: #063b78;
 }
 
-/* =========================================
-   WELCOME
-   ========================================= */
+
+/* =========================================================
+   HOME - WELCOME
+   ========================================================= */
 
 .welcome {
     background: white;
     padding: 35px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
     text-align: center;
 }
@@ -302,9 +364,10 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-/* =========================================
-   QUICK LINKS
-   ========================================= */
+
+/* =========================================================
+   HOME - QUICK LINKS
+   ========================================================= */
 
 .quick-grid {
     display: grid;
@@ -315,7 +378,7 @@ nav ul li a.active {
 .quick-card {
     background: white;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
@@ -327,6 +390,7 @@ nav ul li a.active {
 
 .quick-card p {
     margin-bottom: 18px;
+    color: #555;
 }
 
 .quick-card a {
@@ -339,9 +403,10 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-/* =========================================
-   MISSION & VISION - HOME
-   ========================================= */
+
+/* =========================================================
+   HOME - MISSION & VISION
+   ========================================================= */
 
 .mv-grid {
     display: grid;
@@ -352,7 +417,7 @@ nav ul li a.active {
 .mv-card {
     background: white;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
@@ -361,9 +426,10 @@ nav ul li a.active {
     margin-bottom: 12px;
 }
 
-/* =========================================
+
+/* =========================================================
    ABOUT PAGE
-   ========================================= */
+   ========================================================= */
 
 .mission-vision {
     background: #f5f9ff;
@@ -377,7 +443,7 @@ nav ul li a.active {
 
 .card {
     background: white;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
@@ -395,22 +461,12 @@ nav ul li a.active {
     margin-bottom: 15px;
 }
 
-/* =========================================
-   CORE VALUES
-   ========================================= */
+
+/* CORE VALUES */
 
 .values-header {
     text-align: center;
     margin-bottom: 35px;
-}
-
-.section-label {
-    color: #063b78;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
 }
 
 .values-header .section-title {
@@ -433,7 +489,7 @@ nav ul li a.active {
 .value {
     background: white;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
@@ -441,13 +497,18 @@ nav ul li a.active {
 .value-letter {
     width: 55px;
     height: 55px;
+
     background: #063b78;
     color: white;
+
     border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     margin: 0 auto 15px;
+
     font-size: 24px;
     font-weight: bold;
 }
@@ -461,16 +522,17 @@ nav ul li a.active {
     color: #555;
 }
 
-/* =========================================
-   CTA
-   ========================================= */
+
+/* =========================================================
+   GENERAL CTA
+   ========================================================= */
 
 .cta {
     background: #063b78;
     color: white;
     text-align: center;
     padding: 45px 25px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .cta h2 {
@@ -481,166 +543,14 @@ nav ul li a.active {
     margin-bottom: 20px;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
 
-footer {
-    background: #032d5b;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: 60px;
-}
-
-footer h3 {
-    margin-bottom: 5px;
-}
-
-footer p {
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-.footer-content {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.footer-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.footer-text {
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 800px) {
-
-    .quick-grid,
-    .values-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .mission-vision-grid,
-    .mv-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h2 {
-        font-size: 34px;
-    }
-
-    .page-hero h1 {
-        font-size: 34px;
-    }
-}
-
-@media (max-width: 700px) {
-
-    header {
-        padding: 12px 5%;
-    }
-
-    .header-content {
-        width: 100%;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        width: 100%;
-    }
-
-    nav.show {
-        display: block;
-    }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        display: block;
-        width: 100%;
-        padding: 10px;
-    }
-
-    header {
-        flex-wrap: wrap;
-    }
-
-    .logo-area h1 {
-        font-size: 18px;
-    }
-
-    .logo-area img,
-    .logo img {
-        width: 55px;
-        height: 55px;
-    }
-
-    .logo-text {
-        font-size: 17px;
-    }
-
-    .logo-divider {
-        height: 35px;
-    }
-
-    .hero {
-        min-height: 380px;
-    }
-
-    .hero h2 {
-        font-size: 30px;
-    }
-
-    .hero h3 {
-        font-size: 18px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .page-hero h1 {
-        font-size: 30px;
-    }
-
-    .container {
-        width: 92%;
-    }
-
-    .quick-grid,
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .mission-vision-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* =========================================
+/* =========================================================
    PROGRAMS PAGE - STAGE 1
-   ========================================= */
+   ========================================================= */
+
+.programs {
+    background: #f5f9ff;
+}
 
 .programs-intro {
     max-width: 850px;
@@ -651,6 +561,7 @@ footer p {
 .programs-intro h2 {
     color: #063b78;
     font-size: 32px;
+    line-height: 1.3;
     margin-bottom: 15px;
 }
 
@@ -670,8 +581,10 @@ footer p {
     display: flex;
     align-items: center;
     gap: 18px;
+
     margin-bottom: 28px;
     padding-bottom: 15px;
+
     border-bottom: 2px solid #dce9f7;
 }
 
@@ -696,6 +609,7 @@ footer p {
 .program-category-header h2 {
     color: #063b78;
     font-size: 25px;
+    line-height: 1.3;
     margin: 0;
 }
 
@@ -710,28 +624,30 @@ footer p {
 
 .program-card {
     background: white;
+
     border-radius: 12px;
+
     padding: 28px;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e0eaf5;
 
-    border: 1px solid #e5edf7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 
     display: flex;
     flex-direction: column;
 
-    min-height: 250px;
+    min-height: 255px;
 
     transition:
-        transform 0.2s,
-        box-shadow 0.2s;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .program-card:hover {
     transform: translateY(-5px);
 
     box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.10);
+        0 9px 25px rgba(0, 0, 0, 0.11);
 }
 
 
@@ -762,7 +678,7 @@ footer p {
     color: #063b78;
 
     font-size: 20px;
-    line-height: 1.35;
+    line-height: 1.4;
 
     margin-bottom: 12px;
 }
@@ -801,14 +717,7 @@ footer p {
 }
 
 
-/* FEATURED PROGRAM */
-
-.featured-program {
-    grid-column: span 1;
-}
-
-
-/* PROGRAM INFORMATION CTA */
+/* PROGRAM CTA */
 
 .program-information {
     background: #063b78;
@@ -855,8 +764,6 @@ footer p {
     font-weight: bold;
 
     white-space: nowrap;
-
-    transition: 0.2s;
 }
 
 .program-cta:hover {
@@ -864,66 +771,15 @@ footer p {
 }
 
 
-/* PROGRAMS RESPONSIVE */
-
-@media (max-width: 900px) {
-
-    .program-showcase {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .program-information {
-        flex-direction: column;
-        text-align: center;
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-    .programs-intro h2 {
-        font-size: 27px;
-    }
-
-    .program-category-header {
-        align-items: flex-start;
-    }
-
-    .program-category-header h2 {
-        font-size: 22px;
-    }
-
-    .program-showcase {
-        grid-template-columns: 1fr;
-    }
-
-    .program-card {
-        min-height: auto;
-    }
-
-    .program-information {
-        padding: 30px 22px;
-    }
-
-    .program-information h2 {
-        font-size: 24px;
-    }
-
-    .program-cta {
-        width: 100%;
-        text-align: center;
-    }
-
-}/* =========================================
-   ADMISSIONS
-   ========================================= */
+/* =========================================================
+   OLD PROGRAMS CLASSES
+   Kept for compatibility with any older programs HTML.
+   ========================================================= */
 
 .intro {
     text-align: center;
     max-width: 850px;
-    margin: 0 auto;
-    padding: 50px 0;
+    margin: 0 auto 45px;
 }
 
 .intro-label {
@@ -938,17 +794,46 @@ footer p {
 .intro h2 {
     color: #063b78;
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .intro p {
     color: #555;
-    font-size: 16px;
 }
 
-/* =========================================
-   ADMISSION STEPS
-   ========================================= */
+.program-group {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.program-group-header {
+    background: #063b78;
+    color: white;
+    padding: 18px 25px;
+}
+
+.program-group-header h3 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.program-group-content {
+    padding: 25px;
+}
+
+.program-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+
+/* =========================================================
+   ADMISSIONS
+   ========================================================= */
 
 .steps-section {
     background: white;
@@ -971,13 +856,18 @@ footer p {
 .step-number {
     width: 50px;
     height: 50px;
+
     background: #063b78;
     color: white;
+
     border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     margin: 0 auto 15px;
+
     font-size: 22px;
     font-weight: bold;
 }
@@ -992,9 +882,8 @@ footer p {
     font-size: 15px;
 }
 
-/* =========================================
-   REQUIREMENTS
-   ========================================= */
+
+/* REQUIREMENTS */
 
 .requirements {
     background: #f5f9ff;
@@ -1010,7 +899,9 @@ footer p {
     background: white;
     padding: 30px;
     border-radius: 10px;
+
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
     border-left: 5px solid #063b78;
 }
 
@@ -1023,19 +914,23 @@ footer p {
     color: #555;
 }
 
-/* =========================================
-   ADMISSION CTA
-   ========================================= */
+
+/* ADMISSION CTA */
 
 .admission-cta {
     width: 90%;
     max-width: 1000px;
+
     margin: 50px auto;
+
     padding: 50px 30px;
+
     background: #063b78;
     color: white;
+
     text-align: center;
-    border-radius: 10px;
+
+    border-radius: 12px;
 }
 
 .admission-cta h2 {
@@ -1050,10 +945,14 @@ footer p {
 
 .cta-button {
     display: inline-block;
+
     background: white;
     color: #063b78;
+
     padding: 12px 25px;
+
     border-radius: 6px;
+
     text-decoration: none;
     font-weight: bold;
 }
@@ -1062,38 +961,10 @@ footer p {
     background: #e8f2ff;
 }
 
-/* =========================================
-   ADMISSIONS MOBILE
-   ========================================= */
 
-@media (max-width: 800px) {
-
-    .steps-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .requirements-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 700px) {
-
-    .steps-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .intro h2 {
-        font-size: 27px;
-    }
-
-    .admission-cta {
-        width: 92%;
-    }
-}
-/* =========================================
-   NEWS & ANNOUNCEMENTS
-   ========================================= */
+/* =========================================================
+   NEWS
+   ========================================================= */
 
 .news-section {
     background: #f5f9ff;
@@ -1103,15 +974,6 @@ footer p {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 40px;
-}
-
-.section-intro .section-label {
-    color: #063b78;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
 }
 
 .section-intro h2 {
@@ -1124,6 +986,7 @@ footer p {
     color: #555;
 }
 
+
 /* NEWS GRID */
 
 .news-grid {
@@ -1134,137 +997,136 @@ footer p {
 
 .news-card {
     background: white;
-    border-radius: 10px;
+
+    border-radius: 12px;
     overflow: hidden;
+
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-    transition: transform 0.2s, box-shadow 0.2s;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .news-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
 }
 
 .news-image {
-    height: 140px;
+    height: 150px;
+
     background: #063b78;
     color: white;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 55px;
+
+    font-size: 50px;
 }
 
 .news-content {
     padding: 25px;
 }
 
-.news-date {
-    color: #063b78;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-}
-
 .news-content h3 {
     color: #063b78;
-    font-size: 21px;
     margin-bottom: 10px;
 }
 
 .news-content p {
     color: #555;
-    font-size: 15px;
 }
 
-/* =========================================
-   NEWS NOTICE
-   ========================================= */
+.news-date {
+    display: inline-block;
 
-.notice {
-    background: white;
-}
+    color: #063b78;
 
-.notice-box {
-    background: #063b78;
-    color: white;
-    text-align: center;
-    padding: 40px 25px;
-    border-radius: 10px;
-}
+    font-size: 13px;
+    font-weight: bold;
 
-.notice-box h2 {
     margin-bottom: 10px;
 }
 
-.notice-box p {
-    max-width: 700px;
-    margin: 0 auto;
+
+/* NEWS NOTICE */
+
+.notice {
+    margin-top: 45px;
 }
 
-/* =========================================
-   NEWS MOBILE
-   ========================================= */
+.notice-box {
+    background: white;
 
-@media (max-width: 800px) {
+    border-left: 5px solid #063b78;
 
-    .news-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+    padding: 25px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
-@media (max-width: 700px) {
-
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-intro h2 {
-        font-size: 27px;
-    }
+.notice-box h3 {
+    color: #063b78;
+    margin-bottom: 8px;
 }
-/* =========================================
+
+
+/* =========================================================
    EVENTS
-   ========================================= */
+   ========================================================= */
 
 .events-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    margin-bottom: 50px;
 }
 
 .event-card {
-    display: flex;
     background: white;
-    border-radius: 10px;
+
+    border-radius: 12px;
+
     overflow: hidden;
+
+    display: flex;
+
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .event-date {
-    min-width: 100px;
+    width: 105px;
+    min-width: 105px;
+
     background: #063b78;
     color: white;
+
     display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
+
     text-align: center;
-    padding: 20px 10px;
+
+    padding: 15px;
 }
 
 .event-date .month {
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 .event-date .day {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
+    line-height: 1.1;
 }
 
 .event-content {
@@ -1274,212 +1136,52 @@ footer p {
 .event-content h3 {
     color: #063b78;
     margin-bottom: 10px;
-    font-size: 20px;
 }
 
 .event-content p {
     color: #555;
-    font-size: 15px;
     margin-bottom: 15px;
 }
 
 .event-status {
     display: inline-block;
+
     background: #e8f2ff;
     color: #063b78;
+
     padding: 6px 10px;
-    border-radius: 4px;
-    font-size: 13px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
     font-weight: bold;
 }
 
-/* =========================================
-   EVENTS INFORMATION BOX
-   ========================================= */
-
 .info-box {
-    background: #063b78;
-    color: white;
+    background: #eef5ff;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
     text-align: center;
-    padding: 40px 30px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+
+    margin-top: 40px;
 }
 
 .info-box h2 {
+    color: #063b78;
     margin-bottom: 10px;
 }
 
 .info-box p {
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-/* =========================================
-   EVENTS MOBILE
-   ========================================= */
-
-@media (max-width: 800px) {
-
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 700px) {
-
-    .event-card {
-        flex-direction: column;
-    }
-
-    .event-date {
-        min-width: 0;
-        padding: 12px;
-        flex-direction: row;
-        gap: 8px;
-    }
-
-    .event-date .day {
-        font-size: 22px;
-    }
-
-    .event-content {
-        padding: 20px;
-    }
-}
-/* =========================================
-   CONTACT PAGE
-   ========================================= */
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-bottom: 45px;
-}
-
-.contact-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-}
-
-.contact-icon {
-    width: 60px;
-    height: 60px;
-    background: #063b78;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.contact-card h3 {
-    color: #063b78;
-    margin-bottom: 10px;
-}
-
-.placeholder {
-    color: #777;
-    font-style: italic;
-}
-
-/* CONTACT DETAILS */
-
-.details-box {
-    background: white;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-    margin-bottom: 35px;
-}
-
-.details-box h2 {
-    color: #063b78;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.detail-row {
-    display: flex;
-    gap: 20px;
-    padding: 15px 0;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.detail-row:last-child {
-    border-bottom: none;
-}
-
-.detail-row strong {
-    min-width: 130px;
-    color: #063b78;
-}
-
-.detail-row span {
     color: #555;
 }
 
-/* LOCATION */
 
-.location-box {
-    background: #eef5ff;
-    padding: 35px;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.location-box h2 {
-    color: #063b78;
-    margin-bottom: 12px;
-}
-
-.location-box p {
-    color: #555;
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-/* CONTACT MOBILE */
-
-@media (max-width: 800px) {
-    .contact-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 700px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .details-box {
-        padding: 25px;
-    }
-
-    .detail-row {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .detail-row strong {
-        min-width: auto;
-    }
-
-    .location-box {
-        padding: 25px;
-    }
-}
-/* =========================================
-   FACULTY & STAFF PAGE
-   ========================================= */
+/* =========================================================
+   FACULTY & STAFF
+   ========================================================= */
 
 .staff-section {
     margin-bottom: 55px;
@@ -1491,7 +1193,6 @@ footer p {
 }
 
 .staff-section-header .section-label {
-    display: block;
     margin-bottom: 5px;
 }
 
@@ -1518,29 +1219,40 @@ footer p {
 
 .staff-card {
     background: white;
+
     border-radius: 12px;
+
     padding: 30px 25px;
+
     text-align: center;
+
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-    transition: transform 0.2s, box-shadow 0.2s;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .staff-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.10);
 }
 
 
-/* PHOTO PLACEHOLDER */
+/* STAFF PHOTO PLACEHOLDER */
 
 .staff-photo {
     width: 130px;
     height: 130px;
+
     margin: 0 auto 20px;
 
     border-radius: 50%;
 
     background: #e8f2ff;
+
     border: 4px solid #063b78;
 
     color: #063b78;
@@ -1596,7 +1308,7 @@ footer p {
 }
 
 
-/* SINGLE STAFF CARD */
+/* SINGLE STAFF */
 
 .staff-grid-single {
     grid-template-columns: minmax(250px, 360px);
@@ -1604,25 +1316,481 @@ footer p {
 }
 
 
-/* MOBILE */
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
-@media (max-width: 900px) {
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 
-    .staff-grid,
-    .leadership-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+    margin-bottom: 45px;
+}
 
+.contact-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+
+    background: #063b78;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.contact-card h3 {
+    color: #063b78;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #555;
+    word-break: break-word;
+}
+
+.contact-card a,
+.details-box a {
+    color: #063b78;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-card a:hover,
+.details-box a:hover {
+    text-decoration: underline;
 }
 
 
-@media (max-width: 700px) {
+/* CONTACT DETAILS */
+
+.details-box {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    margin-bottom: 35px;
+}
+
+.details-box h2 {
+    color: #063b78;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+.detail-row {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row strong {
+    min-width: 130px;
+    color: #063b78;
+}
+
+.detail-row span {
+    color: #555;
+}
+
+
+/* LOCATION */
+
+.location-box {
+    background: #eef5ff;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.location-box h2 {
+    color: #063b78;
+    margin-bottom: 12px;
+}
+
+.location-box p {
+    color: #555;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+
+/* PLACEHOLDER */
+
+.placeholder {
+    color: #777;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: #032d5b;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 28px 15px;
+
+    margin-top: 60px;
+}
+
+footer h3 {
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer-content {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-text {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    nav ul {
+        gap: 3px;
+    }
+
+    nav ul li a {
+        padding: 8px 9px;
+        font-size: 13px;
+    }
+
+    .program-showcase {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .staff-grid,
     .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 12px 5%;
+    }
+
+    .header-content {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header > nav {
+        display: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .header-content + nav {
+        display: none;
+    }
+
+    nav.show {
+        display: block !important;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 2px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+
+    /* LOGO */
+
+    .logo-area h1 {
+        font-size: 18px;
+    }
+
+    .logo-area img,
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-text {
+        font-size: 17px;
+    }
+
+    .logo-divider {
+        height: 35px;
+    }
+
+
+    /* GENERAL */
+
+    .container {
+        width: 92%;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 380px;
+        padding: 55px 20px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .page-hero {
+        padding: 55px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 30px;
+    }
+
+    .page-hero p {
+        font-size: 16px;
+    }
+
+
+    /* HOME */
+
+    .quick-grid,
+    .values-grid,
+    .mission-vision-grid,
+    .mv-grid {
         grid-template-columns: 1fr;
     }
 
+
+    /* PROGRAMS */
+
+    .programs-intro h2 {
+        font-size: 27px;
+    }
+
+    .program-category {
+        margin-bottom: 50px;
+    }
+
+    .program-category-header {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .program-category-number {
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    .program-category-header h2 {
+        font-size: 21px;
+    }
+
+    .program-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .program-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .program-information {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 22px;
+    }
+
+    .program-information h2 {
+        font-size: 24px;
+    }
+
+    .program-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* OLD PROGRAMS */
+
+    .program-list {
+        grid-template-columns: 1fr;
+    }
+
+    .program-group-header h3 {
+        font-size: 18px;
+    }
+
+    .program-group-content {
+        padding: 18px;
+    }
+
+
+    /* ADMISSIONS */
+
+    .steps-grid,
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        padding: 20px 0;
+    }
+
+    .intro h2 {
+        font-size: 27px;
+    }
+
+    .admission-cta {
+        width: 92%;
+        padding: 40px 22px;
+    }
+
+    .admission-cta h2 {
+        font-size: 25px;
+    }
+
+
+    /* NEWS */
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-intro h2 {
+        font-size: 27px;
+    }
+
+
+    /* EVENTS */
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        width: 100%;
+        min-width: 0;
+        padding: 12px;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .event-date .day {
+        font-size: 25px;
+    }
+
+
+    /* FACULTY & STAFF */
+
+    .staff-grid,
+    .leadership-grid,
     .staff-grid-single {
         grid-template-columns: 1fr;
     }
@@ -1635,15 +1803,70 @@ footer p {
         font-size: 26px;
     }
 
-}
-.contact-card a,
-.details-box a {
-    color: #063b78;
-    font-weight: bold;
-    text-decoration: none;
+
+    /* CONTACT */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-box {
+        padding: 25px;
+    }
+
+    .detail-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .detail-row strong {
+        min-width: auto;
+    }
+
+    .location-box {
+        padding: 25px;
+    }
 }
 
-.contact-card a:hover,
-.details-box a:hover {
-    text-decoration: underline;
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .logo-area {
+        gap: 8px;
+    }
+
+    .logo-area h1 {
+        font-size: 16px;
+    }
+
+    .logo-area p {
+        font-size: 10px;
+    }
+
+    .logo-area img,
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .page-hero h1 {
+        font-size: 26px;
+    }
+
+    .program-card h3 {
+        font-size: 18px;
+    }
+
+    .contact-card,
+    .details-box {
+        padding: 22px;
+    }
 }
