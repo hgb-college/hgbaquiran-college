@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BSISM | HGBaquiran College</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================
+           BSISM PROGRAM PAGE
+           ========================================= */
+
+        .program-hero {
+            background: linear-gradient(135deg, #063b78, #0a5ca8);
+            color: white;
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .program-hero-logo {
+            width: 190px;
+            height: 190px;
+            margin: 0 auto 25px;
+            background: white;
+            border-radius: 50%;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .program-hero-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .program-label {
+            display: inline-block;
+            padding: 7px 15px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .program-hero h1 {
+            max-width: 900px;
+            margin: 0 auto 15px;
+            font-size: 42px;
+            line-height: 1.2;
+        }
+
+        .program-hero p {
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .program-page {
+            background: #f5f9ff;
+            padding: 70px 20px;
+        }
+
+        .program-content {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .program-section {
+            background: white;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 16px;
+            border: 1px solid #e0eaf5;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .program-section h2 {
+            color: #063b78;
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .program-section p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .program-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .program-info-item {
+            background: #f5f9ff;
+            border: 1px solid #dce9f7;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .program-info-item strong {
+            display: block;
+            color: #063b78;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .program-info-item span {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .program-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .highlight-card {
+            background: #f5f9ff;
+            border: 1px solid #dce9f7;
+            border-radius: 14px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .highlight-card h3 {
+            color: #063b78;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-card p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .career-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 20px;
+            list-style: none;
+        }
+
+        .career-list li {
+            background: #f5f9ff;
+            border: 1px solid #dce9f7;
+            border-radius: 10px;
+            padding: 15px 18px;
+            color: #444;
+        }
+
+        .career-list li::before {
+            content: "✓";
+            color: #063b78;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .program-admission {
+            background: linear-gradient(135deg, #063b78, #0a5ca8);
+            color: white;
+            text-align: center;
+            padding: 45px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 59, 120, 0.18);
+        }
+
+        .program-admission h2 {
+            margin-bottom: 12px;
+            font-size: 30px;
+        }
+
+        .program-admission p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            line-height: 1.7;
+        }
+
+        .program-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .program-back {
+            display: inline-block;
+            background: white;
+            color: #063b78;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+
+        .program-back:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-back.secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .program-back.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 800px) {
+            .program-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .career-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .program-hero {
+                padding: 55px 20px;
+            }
+
+            .program-hero h1 {
+                font-size: 30px;
+            }
+
+            .program-hero-logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .program-section {
+                padding: 25px;
+            }
+
+            .program-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .program-admission {
+                padding: 30px 25px;
+            }
+
+            .program-buttons {
+                flex-direction: column;
+            }
+
+            .program-back {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-area">
+        <img src="logo.png" alt="HGBaquiran College Logo">
+
+        <div>
+            <h1>HGBaquiran College</h1>
+            <p>Excellence • Innovation • Transformation</p>
+        </div>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html" class="active">Programs</a></li>
+            <li><a href="faculty-staff.html">Faculty & Staff</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- PROGRAM HERO -->
+<section class="program-hero">
+
+    <div class="program-hero-logo">
+        <img src="program-logos/ccje.png"
+             alt="College of Criminal Justice Education Logo">
+    </div>
+
+    <span class="program-label">
+        COLLEGE OF CRIMINAL JUSTICE EDUCATION
+    </span>
+
+    <h1>
+        Bachelor of Science in Industrial Security Management
+    </h1>
+
+    <p>
+        Develop knowledge and professional skills in security management,
+        risk awareness, safety, security operations, and organizational
+        protection.
+    </p>
+
+</section>
+
+
+<!-- PROGRAM CONTENT -->
+<main class="program-page">
+
+    <div class="program-content">
+
+        <!-- ABOUT -->
+        <section class="program-section">
+
+            <h2>About the Program</h2>
+
+            <p>
+                The Bachelor of Science in Industrial Security Management
+                prepares students for professional pathways related to
+                security management, safety, risk awareness, and the
+                protection of people, property, facilities, and organizations.
+            </p>
+
+            <p style="margin-top: 15px;">
+                The program develops students' knowledge of security
+                principles, organizational safety, security operations,
+                risk management, and professional communication.
+            </p>
+
+        </section>
+
+
+        <!-- PROGRAM INFORMATION -->
+        <section class="program-section">
+
+            <h2>Program Information</h2>
+
+            <div class="program-info-grid">
+
+                <div class="program-info-item">
+                    <strong>Program</strong>
+                    <span>
+                        Bachelor of Science in Industrial Security Management
+                    </span>
+                </div>
+
+                <div class="program-info-item">
+                    <strong>Program Code</strong>
+                    <span>BSISM</span>
+                </div>
+
+                <div class="program-info-item">
+                    <strong>Level</strong>
+                    <span>Undergraduate Program</span>
+                </div>
+
+                <div class="program-info-item">
+                    <strong>Academic Area</strong>
+                    <span>
+                        Criminal Justice Education
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRAM HIGHLIGHTS -->
+        <section class="program-section">
+
+            <h2>Program Highlights</h2>
+
+            <div class="program-highlights">
+
+                <div class="highlight-card">
+                    <h3>Security Management</h3>
+                    <p>
+                        Develop foundational knowledge of security
+                        management principles and professional practices.
+                    </p>
+                </div>
+
+                <div class="highlight-card">
+                    <h3>Risk & Safety</h3>
+                    <p>
+                        Learn concepts related to risk awareness,
+                        safety, prevention, and organizational protection.
+                    </p>
+                </div>
+
+                <div class="highlight-card">
+                    <h3>Security Operations</h3>
+                    <p>
+                        Build skills related to security operations,
+                        facility protection, and professional coordination.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAREER OPPORTUNITIES -->
+        <section class="program-section">
+
+            <h2>Career Opportunities</h2>
+
+            <p>
+                Graduates may pursue opportunities in private security,
+                corporate security, safety and risk management,
+                facility protection, and related fields, subject to
+                applicable qualifications and regulations.
+            </p>
+
+            <ul class="career-list">
+
+                <li>Security Management Services</li>
+
+                <li>Corporate Security</li>
+
+                <li>Security Operations</li>
+
+                <li>Safety and Risk Support</li>
+
+                <li>Facility Security</li>
+
+                <li>Loss Prevention Support</li>
+
+                <li>Security Administration</li>
+
+                <li>Security Program Support</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ADMISSION CTA -->
+        <section class="program-admission">
+
+            <h2>Interested in Industrial Security Management?</h2>
+
+            <p>
+                Explore admission opportunities at HGBaquiran College
+                and begin your academic journey in Criminal Justice Education.
+            </p>
+
+            <div class="program-buttons">
+
+                <a href="admissions.html" class="program-back">
+                    View Admissions
+                </a>
+
+                <a href="programs.html"
+                   class="program-back secondary">
+                    Back to Programs
+                </a>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer>
+    <h3>HGBaquiran College</h3>
+    <p>© 2026 HGBaquiran College. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
