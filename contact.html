@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,12 +17,12 @@
         ============================== */
 
         .contact-intro {
-            padding: 65px 0 45px;
+            padding: 65px 0 50px;
             background: #ffffff;
             text-align: center;
         }
 
-        .contact-intro-label {
+        .contact-label {
             display: inline-block;
             background: #e8f2ff;
             color: #063b78;
@@ -40,7 +41,7 @@
         }
 
         .contact-intro p {
-            max-width: 750px;
+            max-width: 720px;
             margin: 0 auto;
             color: #555;
             font-size: 17px;
@@ -53,8 +54,8 @@
         ============================== */
 
         .contact-section {
-            padding: 35px 0 75px;
-            background: #f5f9ff;
+            padding: 20px 0 75px;
+            background: #ffffff;
         }
 
         .contact-grid {
@@ -64,7 +65,7 @@
         }
 
         .contact-card {
-            background: #ffffff;
+            background: #f8fbff;
             border: 1px solid #dfeaf5;
             border-radius: 16px;
             padding: 32px 25px;
@@ -76,7 +77,7 @@
         }
 
         .contact-card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-6px);
             border-color: #b9d4f2;
             box-shadow: 0 12px 30px rgba(0, 59, 120, 0.10);
         }
@@ -120,195 +121,93 @@
 
 
         /* ==============================
-           INFORMATION + OFFICE HOURS
+           OFFICE HOURS + LOCATION
         ============================== */
 
-        .details-section {
-            padding: 75px 0;
-            background: #ffffff;
-        }
-
-        .details-layout {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 30px;
-            align-items: stretch;
-        }
-
-        .details-box {
-            background: #ffffff;
-            border: 1px solid #dfeaf5;
-            border-radius: 16px;
-            padding: 35px;
-            box-shadow: 0 8px 25px rgba(0, 59, 120, 0.07);
-        }
-
-        .details-box h2 {
-            color: #063b78;
-            font-size: 27px;
-            margin-bottom: 25px;
-        }
-
-        .detail-row {
-            display: grid;
-            grid-template-columns: 150px 1fr;
-            gap: 15px;
-            padding: 17px 0;
-            border-bottom: 1px solid #e8eef5;
-        }
-
-        .detail-row:last-child {
-            border-bottom: none;
-        }
-
-        .detail-row strong {
-            color: #063b78;
-        }
-
-        .detail-row span {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .detail-row a {
-            color: #063b78;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .detail-row a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* ==============================
-           OFFICE HOURS CARD
-        ============================== */
-
-        .hours-card {
-            background: linear-gradient(
-                135deg,
-                #063b78,
-                #0a5aa8
-            );
-            color: #ffffff;
-            border-radius: 16px;
-            padding: 35px;
-            box-shadow: 0 10px 30px rgba(0, 59, 120, 0.14);
-        }
-
-        .hours-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .hours-card h2 {
-            font-size: 27px;
-            margin-bottom: 20px;
-        }
-
-        .hours-row {
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.18);
-        }
-
-        .hours-row:last-child {
-            border-bottom: none;
-        }
-
-        .hours-row strong {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .hours-row span {
-            color: #eaf4ff;
-        }
-
-
-        /* ==============================
-           LOCATION
-        ============================== */
-
-        .location-section {
+        .contact-info-section {
             padding: 75px 0;
             background: #f5f9ff;
         }
 
-        .location-box {
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .info-card {
             background: #ffffff;
             border: 1px solid #dfeaf5;
-            border-radius: 18px;
-            padding: 40px;
-            text-align: center;
+            border-radius: 16px;
+            padding: 35px;
             box-shadow: 0 8px 25px rgba(0, 59, 120, 0.07);
         }
 
-        .location-box h2 {
+        .info-card h2 {
             color: #063b78;
-            font-size: 30px;
-            margin-bottom: 15px;
+            font-size: 27px;
+            margin-bottom: 22px;
         }
 
-        .location-box p {
-            max-width: 700px;
-            margin: 0 auto 25px;
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #e8eef5;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-row strong {
+            color: #063b78;
+        }
+
+        .info-row span {
             color: #555;
-            line-height: 1.7;
+            text-align: right;
         }
 
-        .address-highlight {
-            display: inline-block;
+        .location-address {
             background: #e8f2ff;
             color: #063b78;
-            padding: 14px 22px;
+            padding: 18px 20px;
             border-radius: 10px;
+            line-height: 1.7;
             font-weight: 600;
         }
 
 
         /* ==============================
-           CONTACT CTA
+           CTA
         ============================== */
 
         .contact-cta {
-            padding: 75px 20px;
+            padding: 70px 20px;
             background: linear-gradient(
                 135deg,
                 #063b78,
                 #0a5aa8
             );
-            text-align: center;
             color: #ffffff;
+            text-align: center;
         }
 
         .contact-cta h2 {
-            font-size: 34px;
+            font-size: 32px;
             margin-bottom: 15px;
         }
 
         .contact-cta p {
-            max-width: 700px;
-            margin: 0 auto 28px;
+            max-width: 650px;
+            margin: 0 auto 25px;
             color: #eaf4ff;
             line-height: 1.8;
         }
 
-        .contact-cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .contact-cta-button {
+        .contact-button {
             display: inline-block;
             background: #ffffff;
             color: #063b78;
@@ -321,27 +220,9 @@
                 box-shadow 0.2s ease;
         }
 
-        .contact-cta-button:hover {
+        .contact-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
-        .contact-cta-button-outline {
-            display: inline-block;
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            padding: 11px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition:
-                background 0.2s ease,
-                color 0.2s ease;
-        }
-
-        .contact-cta-button-outline:hover {
-            background: #ffffff;
-            color: #063b78;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
 
@@ -355,7 +236,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .details-layout {
+            .contact-info-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -377,28 +258,29 @@
             }
 
             .contact-section,
-            .details-section,
-            .location-section {
-                padding: 55px 0;
+            .contact-info-section {
+                padding: 50px 0;
             }
 
-            .details-box,
-            .hours-card,
-            .location-box {
+            .info-card {
                 padding: 28px 22px;
             }
 
-            .detail-row {
-                grid-template-columns: 1fr;
+            .info-row {
+                flex-direction: column;
                 gap: 5px;
             }
 
+            .info-row span {
+                text-align: left;
+            }
+
             .contact-cta {
-                padding: 60px 20px;
+                padding: 55px 20px;
             }
 
             .contact-cta h2 {
-                font-size: 28px;
+                font-size: 27px;
             }
 
         }
@@ -507,19 +389,19 @@
 
     <div class="container">
 
-        <div class="contact-intro-label">
+        <div class="contact-label">
             Get in Touch
         </div>
 
         <h2>
-            We Are Here to Help
+            We'd Be Happy to Hear From You
         </h2>
 
         <p>
             For inquiries about admissions, academic programs,
-            enrollment, and other concerns, please contact
-            HGBaquiran College through our official contact
-            channels.
+            enrollment, and other college concerns, you may
+            contact HGBaquiran College through the official
+            channels below.
         </p>
 
     </div>
@@ -612,104 +494,26 @@
 
 
 <!-- ==============================
-     CONTACT DETAILS
+     OFFICE HOURS + LOCATION
 ============================== -->
 
-<section class="details-section">
+<section class="contact-info-section">
 
     <div class="container">
 
-        <div class="details-layout">
-
-
-            <!-- COLLEGE INFORMATION -->
-
-            <div class="details-box">
-
-                <h2>
-                    College Contact Information
-                </h2>
-
-
-                <div class="detail-row">
-
-                    <strong>
-                        Address
-                    </strong>
-
-                    <span>
-                        Brgy District 1,
-                        Tumauini, Isabela 3325
-                    </span>
-
-                </div>
-
-
-                <div class="detail-row">
-
-                    <strong>
-                        Telephone
-                    </strong>
-
-                    <span>
-
-                        <a href="tel:0782582601">
-                            078-258-2601
-                        </a>
-
-                    </span>
-
-                </div>
-
-
-                <div class="detail-row">
-
-                    <strong>
-                        Email
-                    </strong>
-
-                    <span>
-
-                        <a href="mailto:hgbaquirancollege2005@gmail.com">
-                            hgbaquirancollege2005@gmail.com
-                        </a>
-
-                    </span>
-
-                </div>
-
-
-                <div class="detail-row">
-
-                    <strong>
-                        Office Hours
-                    </strong>
-
-                    <span>
-                        Monday – Friday: 8:00 AM – 5:00 PM<br>
-                        Saturday: 8:00 AM – 12:00 NN
-                    </span>
-
-                </div>
-
-
-            </div>
+        <div class="contact-info-grid">
 
 
             <!-- OFFICE HOURS -->
 
-            <div class="hours-card">
-
-                <div class="hours-icon">
-                    🕐
-                </div>
+            <div class="info-card">
 
                 <h2>
                     Office Hours
                 </h2>
 
 
-                <div class="hours-row">
+                <div class="info-row">
 
                     <strong>
                         Monday – Friday
@@ -722,7 +526,7 @@
                 </div>
 
 
-                <div class="hours-row">
+                <div class="info-row">
 
                     <strong>
                         Saturday
@@ -735,7 +539,7 @@
                 </div>
 
 
-                <div class="hours-row">
+                <div class="info-row">
 
                     <strong>
                         Sunday
@@ -750,37 +554,28 @@
             </div>
 
 
-        </div>
+            <!-- LOCATION -->
 
-    </div>
+            <div class="info-card">
 
-</section>
+                <h2>
+                    Visit Our Campus
+                </h2>
 
+                <p style="color:#555; line-height:1.7; margin-bottom:20px;">
+                    We welcome visitors during official
+                    office hours.
+                </p>
 
-<!-- ==============================
-     LOCATION
-============================== -->
+                <div class="location-address">
 
-<section class="location-section">
+                    Brgy District 1,<br>
+                    Tumauini, Isabela 3325
 
-    <div class="container">
-
-        <div class="location-box">
-
-            <h2>
-                Visit HGBaquiran College
-            </h2>
-
-            <p>
-                HGBaquiran College is located at:
-            </p>
-
-            <div class="address-highlight">
-
-                Brgy District 1,
-                Tumauini, Isabela 3325
+                </div>
 
             </div>
+
 
         </div>
 
@@ -796,34 +591,21 @@
 <section class="contact-cta">
 
     <h2>
-        Have Questions?
+        Have More Questions?
     </h2>
 
     <p>
-        Our official contact channels are available for
-        inquiries about admissions, programs, enrollment,
-        and other college concerns.
+        For admission inquiries, program information,
+        enrollment concerns, or other questions,
+        feel free to reach out to HGBaquiran College.
     </p>
 
-
-    <div class="contact-cta-buttons">
-
-        <a
-            href="mailto:hgbaquirancollege2005@gmail.com"
-            class="contact-cta-button"
-        >
-            Email the College
-        </a>
-
-
-        <a
-            href="tel:0782582601"
-            class="contact-cta-button-outline"
-        >
-            Call 078-258-2601
-        </a>
-
-    </div>
+    <a
+        href="mailto:hgbaquirancollege2005@gmail.com"
+        class="contact-button"
+    >
+        Email the College
+    </a>
 
 </section>
 
