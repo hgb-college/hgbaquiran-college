@@ -1870,3 +1870,28 @@ footer p {
         padding: 22px;
     }
 }
+/* CLICKABLE PROGRAM CARDS */
+
+.program-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.program-card h3,
+.program-card p {
+    color: inherit;
+}
+
+.program-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
