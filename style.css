@@ -53,53 +53,32 @@ header {
     background: #063b78;
     color: white;
     padding: 12px 5%;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-content {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 100;
 }
 
 
-/* LOGO AREA - INDEX / CONTACT / EVENTS / FACULTY */
+/* =========================================================
+   LOGO
+   ========================================================= */
 
+.logo,
 .logo-area {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
+.logo img,
 .logo-area img {
-    width: 65px;
-    height: 65px;
-    object-fit: contain;
-    background: white;
-    border-radius: 50%;
-    padding: 4px;
-}
-
-.logo-area h1 {
-    font-size: 22px;
-    line-height: 1.2;
-}
-
-.logo-area p {
-    font-size: 12px;
-    opacity: 0.9;
-}
-
-
-/* LOGO - ABOUT / PROGRAMS / ADMISSIONS / NEWS */
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo img {
     width: 65px;
     height: 65px;
     object-fit: contain;
@@ -120,15 +99,14 @@ header {
     line-height: 1.2;
 }
 
+.logo-area h1 {
+    font-size: 22px;
+    line-height: 1.2;
+}
 
-/* HEADER CONTENT */
-
-.header-content {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+.logo-area p {
+    font-size: 12px;
+    opacity: 0.9;
 }
 
 
@@ -142,20 +120,26 @@ nav {
 
 nav ul {
     list-style: none;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    flex-wrap: wrap;
+
+    gap: 5px;
 }
 
 nav ul li a {
     display: block;
+
     color: white;
     text-decoration: none;
+
     padding: 9px 11px;
+
     border-radius: 6px;
+
     font-size: 14px;
+    white-space: nowrap;
 }
 
 nav ul li a:hover,
@@ -165,22 +149,36 @@ nav ul li a.active {
 }
 
 
-/* MOBILE MENU BUTTON */
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
 
 .menu-toggle {
     display: none;
+
     background: transparent;
+
     border: 2px solid white;
+
     color: white;
+
     font-size: 24px;
+
     padding: 5px 10px;
+
     border-radius: 6px;
+
     cursor: pointer;
+}
+
+.menu-toggle:hover {
+    background: white;
+    color: #063b78;
 }
 
 
 /* =========================================================
-   HERO - HOME
+   HOME HERO
    ========================================================= */
 
 .hero {
@@ -198,6 +196,7 @@ nav ul li a.active {
     justify-content: center;
 
     text-align: center;
+
     color: white;
 
     padding: 70px 20px;
@@ -228,9 +227,6 @@ nav ul li a.active {
     margin: 0 auto 25px;
 }
 
-
-/* HERO BUTTONS */
-
 .hero-buttons {
     display: flex;
     justify-content: center;
@@ -253,6 +249,7 @@ nav ul li a.active {
         url("campus.jpg") center center / cover no-repeat;
 
     color: white;
+
     text-align: center;
 
     padding: 75px 20px;
@@ -289,18 +286,19 @@ nav ul li a.active {
     color: #555;
 }
 
-
-/* =========================================================
-   SECTION LABEL
-   ========================================================= */
-
 .section-label {
     display: block;
+
     color: #063b78;
+
     font-weight: bold;
+
     text-transform: uppercase;
+
     font-size: 13px;
+
     letter-spacing: 1px;
+
     margin-bottom: 8px;
 }
 
@@ -311,9 +309,13 @@ nav ul li a.active {
 
 .btn {
     display: inline-block;
+
     padding: 12px 25px;
+
     border-radius: 6px;
+
     text-decoration: none;
+
     font-weight: bold;
 }
 
@@ -343,9 +345,14 @@ nav ul li a.active {
 
 .welcome {
     background: white;
+
     padding: 35px;
+
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
+
     text-align: center;
 }
 
@@ -371,16 +378,23 @@ nav ul li a.active {
 
 .quick-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
 }
 
 .quick-card {
     background: white;
+
     padding: 30px;
+
     border-radius: 12px;
+
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .quick-card h3 {
@@ -410,15 +424,21 @@ nav ul li a.active {
 
 .mv-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
 }
 
 .mv-card {
     background: white;
+
     padding: 30px;
+
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .mv-card h3 {
@@ -437,15 +457,21 @@ nav ul li a.active {
 
 .mission-vision-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 30px;
 }
 
 .card {
     background: white;
+
     border-radius: 12px;
+
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .card h2 {
@@ -462,7 +488,9 @@ nav ul li a.active {
 }
 
 
-/* CORE VALUES */
+/* =========================================================
+   CORE VALUES
+   ========================================================= */
 
 .values-header {
     text-align: center;
@@ -475,23 +503,33 @@ nav ul li a.active {
 
 .values-subtitle {
     color: #063b78;
+
     font-size: 22px;
+
     font-weight: bold;
+
     letter-spacing: 4px;
 }
 
 .values-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
 }
 
 .value {
     background: white;
+
     padding: 30px;
+
     border-radius: 12px;
+
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .value-letter {
@@ -529,9 +567,13 @@ nav ul li a.active {
 
 .cta {
     background: #063b78;
+
     color: white;
+
     text-align: center;
+
     padding: 45px 25px;
+
     border-radius: 12px;
 }
 
@@ -545,7 +587,7 @@ nav ul li a.active {
 
 
 /* =========================================================
-   PROGRAMS PAGE - STAGE 1
+   PROGRAMS
    ========================================================= */
 
 .programs {
@@ -554,14 +596,19 @@ nav ul li a.active {
 
 .programs-intro {
     max-width: 850px;
+
     margin: 0 auto 60px;
+
     text-align: center;
 }
 
 .programs-intro h2 {
     color: #063b78;
+
     font-size: 32px;
+
     line-height: 1.3;
+
     margin-bottom: 15px;
 }
 
@@ -570,19 +617,19 @@ nav ul li a.active {
     font-size: 16px;
 }
 
-
-/* PROGRAM CATEGORY */
-
 .program-category {
     margin-bottom: 65px;
 }
 
 .program-category-header {
     display: flex;
+
     align-items: center;
+
     gap: 18px;
 
     margin-bottom: 28px;
+
     padding-bottom: 15px;
 
     border-bottom: 2px solid #dce9f7;
@@ -591,6 +638,7 @@ nav ul li a.active {
 .program-category-number {
     width: 55px;
     height: 55px;
+
     flex-shrink: 0;
 
     background: #063b78;
@@ -608,8 +656,11 @@ nav ul li a.active {
 
 .program-category-header h2 {
     color: #063b78;
+
     font-size: 25px;
+
     line-height: 1.3;
+
     margin: 0;
 }
 
@@ -620,12 +671,19 @@ nav ul li a.active {
 
 .program-showcase {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 28px;
 }
 
 .program-card {
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 420px;
 
     background: white;
 
@@ -635,26 +693,22 @@ nav ul li a.active {
 
     border: 1px solid #e0eaf5;
 
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
-
-    display: flex;
-    flex-direction: column;
-
-    min-height: 420px;
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.07);
 
     text-decoration: none;
+
     color: inherit;
 
     overflow: hidden;
+
+    cursor: pointer;
 
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease,
         border-color 0.3s ease;
 }
-
-
-/* TOP BLUE ACCENT */
 
 .program-card::before {
     content: "";
@@ -670,9 +724,6 @@ nav ul li a.active {
     background: #063b78;
 }
 
-
-/* HOVER EFFECT */
-
 .program-card:hover {
     transform: translateY(-8px);
 
@@ -682,9 +733,6 @@ nav ul li a.active {
         0 16px 35px rgba(0, 59, 120, 0.14);
 }
 
-
-/* PROGRAM LOGO */
-
 .program-card-logo {
     width: 145px;
     height: 145px;
@@ -692,6 +740,7 @@ nav ul li a.active {
     margin: 5px auto 22px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -717,17 +766,11 @@ nav ul li a.active {
     display: block;
 }
 
-
-/* LOGO HOVER */
-
 .program-card:hover .program-card-logo {
     transform: scale(1.05);
 
     background: #eaf4ff;
 }
-
-
-/* PROGRAM CODE */
 
 .program-card-top {
     margin-bottom: 14px;
@@ -751,9 +794,6 @@ nav ul li a.active {
     letter-spacing: 0.5px;
 }
 
-
-/* PROGRAM TITLE */
-
 .program-card h3 {
     color: #063b78;
 
@@ -764,9 +804,6 @@ nav ul li a.active {
     margin-bottom: 12px;
 }
 
-
-/* PROGRAM DESCRIPTION */
-
 .program-card p {
     color: #555;
 
@@ -776,9 +813,6 @@ nav ul li a.active {
 
     margin-bottom: 22px;
 }
-
-
-/* PROGRAM FOOTER */
 
 .program-footer {
     margin-top: auto;
@@ -808,15 +842,9 @@ nav ul li a.active {
     transition: transform 0.2s ease;
 }
 
-
-/* ARROW MOVEMENT */
-
 .program-card:hover .program-footer span:last-child {
     transform: translateX(4px);
 }
-
-
-/* FEATURED BSHM */
 
 .featured-program {
     border: 2px solid #063b78;
@@ -827,30 +855,37 @@ nav ul li a.active {
 }
 
 
-
 /* =========================================================
-   OLD PROGRAMS CLASSES
-   Kept for compatibility with any older programs HTML.
+   OLD PROGRAM CLASSES
    ========================================================= */
 
 .intro {
     text-align: center;
+
     max-width: 850px;
+
     margin: 0 auto 45px;
 }
 
 .intro-label {
     color: #063b78;
+
     font-size: 14px;
+
     font-weight: bold;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
+
     margin-bottom: 8px;
 }
 
 .intro h2 {
     color: #063b78;
+
     font-size: 32px;
+
     margin-bottom: 12px;
 }
 
@@ -860,20 +895,28 @@ nav ul li a.active {
 
 .program-group {
     background: white;
+
     border-radius: 12px;
+
     margin-bottom: 30px;
+
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .program-group-header {
     background: #063b78;
+
     color: white;
+
     padding: 18px 25px;
 }
 
 .program-group-header h3 {
     margin: 0;
+
     font-size: 21px;
 }
 
@@ -883,7 +926,9 @@ nav ul li a.active {
 
 .program-list {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 15px;
 }
 
@@ -898,15 +943,21 @@ nav ul li a.active {
 
 .steps-grid {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 20px;
 }
 
 .step {
     background: #f5f9ff;
+
     padding: 30px 20px;
+
     border-radius: 10px;
+
     text-align: center;
+
     border-top: 4px solid #063b78;
 }
 
@@ -931,16 +982,15 @@ nav ul li a.active {
 
 .step h3 {
     color: #063b78;
+
     margin-bottom: 10px;
 }
 
 .step p {
     color: #555;
+
     font-size: 15px;
 }
-
-
-/* REQUIREMENTS */
 
 .requirements {
     background: #f5f9ff;
@@ -948,22 +998,28 @@ nav ul li a.active {
 
 .requirements-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
 }
 
 .requirement-card {
     background: white;
+
     padding: 30px;
+
     border-radius: 10px;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 
     border-left: 5px solid #063b78;
 }
 
 .requirement-card h3 {
     color: #063b78;
+
     margin-bottom: 10px;
 }
 
@@ -971,11 +1027,9 @@ nav ul li a.active {
     color: #555;
 }
 
-
-/* ADMISSION CTA */
-
 .admission-cta {
     width: 90%;
+
     max-width: 1000px;
 
     margin: 50px auto;
@@ -983,6 +1037,7 @@ nav ul li a.active {
     padding: 50px 30px;
 
     background: #063b78;
+
     color: white;
 
     text-align: center;
@@ -992,11 +1047,13 @@ nav ul li a.active {
 
 .admission-cta h2 {
     font-size: 30px;
+
     margin-bottom: 10px;
 }
 
 .admission-cta p {
     max-width: 700px;
+
     margin: 0 auto 25px;
 }
 
@@ -1004,6 +1061,7 @@ nav ul li a.active {
     display: inline-block;
 
     background: white;
+
     color: #063b78;
 
     padding: 12px 25px;
@@ -1011,6 +1069,7 @@ nav ul li a.active {
     border-radius: 6px;
 
     text-decoration: none;
+
     font-weight: bold;
 }
 
@@ -1029,13 +1088,17 @@ nav ul li a.active {
 
 .section-intro {
     text-align: center;
+
     max-width: 800px;
+
     margin: 0 auto 40px;
 }
 
 .section-intro h2 {
     color: #063b78;
+
     font-size: 32px;
+
     margin-bottom: 12px;
 }
 
@@ -1043,12 +1106,11 @@ nav ul li a.active {
     color: #555;
 }
 
-
-/* NEWS GRID */
-
 .news-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
 }
 
@@ -1056,9 +1118,11 @@ nav ul li a.active {
     background: white;
 
     border-radius: 12px;
+
     overflow: hidden;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 
     transition:
         transform 0.2s ease,
@@ -1076,9 +1140,11 @@ nav ul li a.active {
     height: 150px;
 
     background: #063b78;
+
     color: white;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1091,6 +1157,7 @@ nav ul li a.active {
 
 .news-content h3 {
     color: #063b78;
+
     margin-bottom: 10px;
 }
 
@@ -1104,13 +1171,11 @@ nav ul li a.active {
     color: #063b78;
 
     font-size: 13px;
+
     font-weight: bold;
 
     margin-bottom: 10px;
 }
-
-
-/* NEWS NOTICE */
 
 .notice {
     margin-top: 45px;
@@ -1125,11 +1190,13 @@ nav ul li a.active {
 
     border-radius: 8px;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
 .notice-box h3 {
     color: #063b78;
+
     margin-bottom: 8px;
 }
 
@@ -1140,7 +1207,9 @@ nav ul li a.active {
 
 .events-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
 }
 
@@ -1153,20 +1222,25 @@ nav ul li a.active {
 
     display: flex;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .event-date {
     width: 105px;
+
     min-width: 105px;
 
     background: #063b78;
+
     color: white;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -1176,13 +1250,17 @@ nav ul li a.active {
 
 .event-date .month {
     font-size: 13px;
+
     text-transform: uppercase;
+
     font-weight: bold;
 }
 
 .event-date .day {
     font-size: 32px;
+
     font-weight: bold;
+
     line-height: 1.1;
 }
 
@@ -1192,11 +1270,13 @@ nav ul li a.active {
 
 .event-content h3 {
     color: #063b78;
+
     margin-bottom: 10px;
 }
 
 .event-content p {
     color: #555;
+
     margin-bottom: 15px;
 }
 
@@ -1204,6 +1284,7 @@ nav ul li a.active {
     display: inline-block;
 
     background: #e8f2ff;
+
     color: #063b78;
 
     padding: 6px 10px;
@@ -1211,6 +1292,7 @@ nav ul li a.active {
     border-radius: 5px;
 
     font-size: 12px;
+
     font-weight: bold;
 }
 
@@ -1228,6 +1310,7 @@ nav ul li a.active {
 
 .info-box h2 {
     color: #063b78;
+
     margin-bottom: 10px;
 }
 
@@ -1246,6 +1329,7 @@ nav ul li a.active {
 
 .staff-section-header {
     text-align: center;
+
     margin-bottom: 30px;
 }
 
@@ -1255,24 +1339,21 @@ nav ul li a.active {
 
 .staff-section-header h2 {
     color: #063b78;
+
     font-size: 30px;
 }
 
-
-/* STAFF GRID */
-
 .staff-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
 }
 
 .leadership-grid {
     grid-template-columns: repeat(3, 1fr);
 }
-
-
-/* STAFF CARD */
 
 .staff-card {
     background: white;
@@ -1283,7 +1364,8 @@ nav ul li a.active {
 
     text-align: center;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 
     transition:
         transform 0.2s ease,
@@ -1296,9 +1378,6 @@ nav ul li a.active {
     box-shadow:
         0 8px 22px rgba(0, 0, 0, 0.10);
 }
-
-
-/* STAFF PHOTO PLACEHOLDER */
 
 .staff-photo {
     width: 130px;
@@ -1315,15 +1394,14 @@ nav ul li a.active {
     color: #063b78;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     font-weight: bold;
+
     font-size: 16px;
 }
-
-
-/* STAFF INFORMATION */
 
 .staff-info {
     max-width: 100%;
@@ -1335,9 +1413,11 @@ nav ul li a.active {
     color: #063b78;
 
     font-size: 13px;
+
     font-weight: bold;
 
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
 
     margin-bottom: 8px;
@@ -1347,13 +1427,11 @@ nav ul li a.active {
     color: #222;
 
     font-size: 18px;
+
     line-height: 1.4;
 
     margin: 0;
 }
-
-
-/* LEADERSHIP */
 
 .leadership-card {
     padding: 35px 25px;
@@ -1364,11 +1442,9 @@ nav ul li a.active {
     height: 145px;
 }
 
-
-/* SINGLE STAFF */
-
 .staff-grid-single {
     grid-template-columns: minmax(250px, 360px);
+
     justify-content: center;
 }
 
@@ -1379,7 +1455,9 @@ nav ul li a.active {
 
 .contact-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
 
     margin-bottom: 45px;
@@ -1394,7 +1472,8 @@ nav ul li a.active {
 
     text-align: center;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 .contact-icon {
@@ -1402,34 +1481,41 @@ nav ul li a.active {
     height: 60px;
 
     background: #063b78;
+
     color: white;
 
     border-radius: 50%;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     margin: 0 auto 15px;
 
     font-size: 25px;
+
     font-weight: bold;
 }
 
 .contact-card h3 {
     color: #063b78;
+
     margin-bottom: 10px;
 }
 
 .contact-card p {
     color: #555;
+
     word-break: break-word;
 }
 
 .contact-card a,
 .details-box a {
     color: #063b78;
+
     font-weight: bold;
+
     text-decoration: none;
 }
 
@@ -1438,9 +1524,6 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-
-/* CONTACT DETAILS */
-
 .details-box {
     background: white;
 
@@ -1448,7 +1531,8 @@ nav ul li a.active {
 
     border-radius: 12px;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
 
     margin-bottom: 35px;
 }
@@ -1477,15 +1561,13 @@ nav ul li a.active {
 
 .detail-row strong {
     min-width: 130px;
+
     color: #063b78;
 }
 
 .detail-row span {
     color: #555;
 }
-
-
-/* LOCATION */
 
 .location-box {
     background: #eef5ff;
@@ -1501,20 +1583,21 @@ nav ul li a.active {
 
 .location-box h2 {
     color: #063b78;
+
     margin-bottom: 12px;
 }
 
 .location-box p {
     color: #555;
+
     max-width: 750px;
+
     margin: 0 auto;
 }
 
-
-/* PLACEHOLDER */
-
 .placeholder {
     color: #777;
+
     font-style: italic;
 }
 
@@ -1541,6 +1624,7 @@ footer h3 {
 
 footer p {
     font-size: 14px;
+
     opacity: 0.9;
 }
 
@@ -1551,18 +1635,21 @@ footer p {
 
 .footer-title {
     font-size: 20px;
+
     font-weight: bold;
+
     margin-bottom: 5px;
 }
 
 .footer-text {
     font-size: 14px;
+
     opacity: 0.9;
 }
 
 
 /* =========================================================
-   RESPONSIVE - TABLET
+   TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
@@ -1572,7 +1659,8 @@ footer p {
     }
 
     nav ul li a {
-        padding: 8px 9px;
+        padding: 8px 8px;
+
         font-size: 13px;
     }
 
@@ -1596,7 +1684,7 @@ footer p {
 
 
 /* =========================================================
-   RESPONSIVE - MOBILE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
@@ -1609,40 +1697,47 @@ footer p {
         width: 100%;
     }
 
+
+    /* MOBILE MENU */
+
     .menu-toggle {
         display: block;
     }
 
-    header > nav {
+    nav {
         display: none;
-        width: 100%;
-        margin-left: 0;
-    }
 
-    .header-content + nav {
-        display: none;
+        width: 100%;
+
+        margin-left: 0;
+
+        margin-top: 5px;
     }
 
     nav.show {
-        display: block !important;
+        display: block;
     }
 
     nav ul {
         flex-direction: column;
+
         width: 100%;
-        margin-top: 10px;
+
         gap: 2px;
+
+        margin-top: 8px;
     }
 
     nav ul li {
         width: 100%;
-        text-align: center;
     }
 
     nav ul li a {
-        display: block;
         width: 100%;
-        padding: 10px;
+
+        text-align: center;
+
+        padding: 11px;
     }
 
 
@@ -1665,11 +1760,7 @@ footer p {
     .logo-divider {
         height: 35px;
     }
-.program-card-logo {
-    width: 125px;
-    height: 125px;
-    margin-bottom: 20px;
-}
+
 
     /* GENERAL */
 
@@ -1686,6 +1777,7 @@ footer p {
 
     .hero {
         min-height: 380px;
+
         padding: 55px 20px;
     }
 
@@ -1736,12 +1828,14 @@ footer p {
 
     .program-category-header {
         align-items: flex-start;
+
         gap: 12px;
     }
 
     .program-category-number {
         width: 45px;
         height: 45px;
+
         font-size: 15px;
     }
 
@@ -1755,22 +1849,15 @@ footer p {
 
     .program-card {
         min-height: auto;
+
         padding: 25px;
     }
 
-    .program-information {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 22px;
-    }
+    .program-card-logo {
+        width: 125px;
+        height: 125px;
 
-    .program-information h2 {
-        font-size: 24px;
-    }
-
-    .program-cta {
-        width: 100%;
-        text-align: center;
+        margin-bottom: 20px;
     }
 
 
@@ -1806,6 +1893,7 @@ footer p {
 
     .admission-cta {
         width: 92%;
+
         padding: 40px 22px;
     }
 
@@ -1837,9 +1925,13 @@ footer p {
 
     .event-date {
         width: 100%;
+
         min-width: 0;
+
         padding: 12px;
+
         flex-direction: row;
+
         gap: 10px;
     }
 
@@ -1877,6 +1969,7 @@ footer p {
 
     .detail-row {
         flex-direction: column;
+
         gap: 5px;
     }
 
@@ -1887,6 +1980,7 @@ footer p {
     .location-box {
         padding: 25px;
     }
+
 }
 
 
@@ -1914,6 +2008,10 @@ footer p {
         height: 48px;
     }
 
+    .logo-text {
+        font-size: 15px;
+    }
+
     .hero h2 {
         font-size: 26px;
     }
@@ -1926,37 +2024,14 @@ footer p {
         font-size: 18px;
     }
 
+    .program-card-logo {
+        width: 110px;
+        height: 110px;
+    }
+
     .contact-card,
     .details-box {
         padding: 22px;
     }
-   .program-card-logo {
-    width: 110px;
-    height: 110px;
-}
-}
-/* CLICKABLE PROGRAM CARDS */
 
-.program-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.program-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-
-.program-card h3,
-.program-card p {
-    color: inherit;
-}
-
-.program-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
