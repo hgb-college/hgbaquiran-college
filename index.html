@@ -7,166 +7,682 @@
     <title>HGBaquiran College | Home</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ========================================
+           HOMEPAGE HERO
+        ======================================== */
+
+        .home-hero {
+            min-height: 560px;
+            background:
+                linear-gradient(
+                    rgba(3, 45, 91, 0.78),
+                    rgba(6, 59, 120, 0.78)
+                ),
+                url("campus.jpg") center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .home-hero-content {
+            max-width: 850px;
+        }
+
+        .hero-logo {
+            width: 115px;
+            height: 115px;
+            object-fit: contain;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 5px 12px rgba(0,0,0,0.25));
+        }
+
+        .home-hero h2 {
+            font-size: 48px;
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .home-hero h3 {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
+        }
+
+        .home-hero p {
+            max-width: 720px;
+            margin: 0 auto 30px;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        /* ========================================
+           HOMEPAGE SECTIONS
+        ======================================== */
+
+        .home-section {
+            padding: 70px 20px;
+        }
+
+        .home-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .home-section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .home-section-title h2 {
+            color: #063b78;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .home-section-title p {
+            color: #666;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: auto;
+        }
+
+
+        /* ========================================
+           WELCOME
+        ======================================== */
+
+        .welcome-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .welcome-text h2 {
+            color: #063b78;
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .welcome-text p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .welcome-image {
+            min-height: 300px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .welcome-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #063b78;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+
+        .read-more:hover {
+            color: #0b5ca8;
+        }
+
+
+        /* ========================================
+           STATS
+        ======================================== */
+
+        .stats-section {
+            background: #f5f9ff;
+            padding: 45px 20px;
+        }
+
+        .stats-grid {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .stat-number {
+            color: #063b78;
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            color: #666;
+            margin: 0;
+        }
+
+
+        /* ========================================
+           PROGRAMS
+        ======================================== */
+
+        .featured-programs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .featured-program-card {
+            background: white;
+            border: 1px solid #e0eaf5;
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+            transition: 0.3s ease;
+        }
+
+        .featured-program-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 30px rgba(0,59,120,0.12);
+        }
+
+        .featured-program-card h3 {
+            color: #063b78;
+            margin-bottom: 12px;
+        }
+
+        .featured-program-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .featured-program-card a {
+            color: #063b78;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* ========================================
+           MISSION / VISION
+        ======================================== */
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .mv-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            border: 1px solid #e0eaf5;
+            border-top: 5px solid #063b78;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        .mv-card h3 {
+            color: #063b78;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .mv-card p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+
+        /* ========================================
+           QUICK LINKS
+        ======================================== */
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .quick-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e0eaf5;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+            transition: 0.3s ease;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(0,59,120,0.12);
+        }
+
+        .quick-card h3 {
+            color: #063b78;
+            margin-bottom: 12px;
+        }
+
+        .quick-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .quick-card a {
+            color: #063b78;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+
+        /* ========================================
+           CTA
+        ======================================== */
+
+        .home-cta {
+            background: linear-gradient(135deg, #063b78, #0b5ca8);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .home-cta h2 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .home-cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            line-height: 1.7;
+        }
+
+        .home-cta .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            background: white;
+            color: #063b78;
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 900px) {
+
+            .welcome-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-programs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .quick-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .home-hero {
+                min-height: 500px;
+            }
+
+            .home-hero h2 {
+                font-size: 35px;
+            }
+
+            .home-hero h3 {
+                font-size: 17px;
+            }
+
+            .home-hero p {
+                font-size: 15px;
+            }
+
+            .featured-programs,
+            .quick-grid,
+            .mv-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .home-section {
+                padding: 50px 15px;
+            }
+
+            .home-section-title h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-    <!-- HEADER -->
-    <header>
+<!-- ========================================
+     HEADER
+======================================== -->
 
-        <div class="logo-area">
+<header>
 
-            <img src="logo.png" alt="HGBaquiran College Logo">
+    <div class="logo-area">
 
-            <div>
-                <h1>HGBaquiran College</h1>
-                <p>Excellence • Innovation • Transformation</p>
-            </div>
+        <img src="logo.png" alt="HGBaquiran College Logo">
 
+        <div>
+            <h1>HGBaquiran College</h1>
+            <p>Excellence • Innovation • Transformation</p>
         </div>
 
+    </div>
 
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-<nav id="mainNav">
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="faculty-staff.html">Faculty & Staff</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-    </header>
+    <nav id="mainNav">
 
+        <ul>
 
-    <!-- HERO -->
-    <section class="hero">
+            <li>
+                <a href="index.html" class="active">Home</a>
+            </li>
 
-        <div class="hero-content">
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
 
-            <h2>Welcome to HGBaquiran College</h2>
+            <li>
+                <a href="programs.html">Programs</a>
+            </li>
 
-            <h3>
-                Excellence • Innovation • Transformation
-            </h3>
+            <li>
+                <a href="faculty-staff.html">Faculty & Staff</a>
+            </li>
 
-            <p>
-                Empowering learners through quality education,
-                relevant research, innovation, and responsive
-                community engagement.
-            </p>
+            <li>
+                <a href="admissions.html">Admissions</a>
+            </li>
 
+            <li>
+                <a href="news.html">News</a>
+            </li>
 
-            <div class="hero-buttons">
+            <li>
+                <a href="events.html">Events</a>
+            </li>
 
-                <a href="programs.html" class="btn btn-primary">
-                    Explore Programs
-                </a>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
 
-                <a href="admissions.html" class="btn btn-secondary">
-                    Admissions
-                </a>
+        </ul>
 
-            </div>
+    </nav>
 
-        </div>
-
-    </section>
+</header>
 
 
-    <!-- WELCOME -->
-    <section class="container">
+<!-- ========================================
+     HERO
+======================================== -->
 
-        <div class="section-title">
-            <h2>Welcome to HGBaquiran College</h2>
-            <p>Learn more about our institution.</p>
-        </div>
+<section class="home-hero">
 
+    <div class="home-hero-content">
 
-        <div class="welcome">
+        <img
+            src="logo.png"
+            alt="HGBaquiran College Logo"
+            class="hero-logo"
+        >
 
-            <p>
-                HGBaquiran College is committed to providing a
-                quality and learner-centered institution that
-                develops competent and future-ready graduates.
-                The college also promotes relevant research and
-                innovation and engages in responsive community
-                service and partnership.
-            </p>
+        <h2>
+            Welcome to HGBaquiran College
+        </h2>
 
-            <a href="about.html" class="read-more">
-                Learn More About Us →
+        <h3>
+            Excellence • Innovation • Transformation
+        </h3>
+
+        <p>
+            Empowering learners through quality education,
+            relevant research, innovation, and responsive
+            community engagement.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="programs.html" class="btn btn-primary">
+                Explore Programs
+            </a>
+
+            <a href="admissions.html" class="btn btn-secondary">
+                Admissions
             </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- QUICK LINKS -->
-    <section class="container">
+<!-- ========================================
+     WELCOME
+======================================== -->
 
-        <div class="section-title">
+<section class="home-section">
 
-            <h2>Explore HGBaquiran College</h2>
+    <div class="home-container">
+
+        <div class="welcome-grid">
+
+            <div class="welcome-text">
+
+                <h2>
+                    Welcome to HGBaquiran College
+                </h2>
+
+                <p>
+                    HGBaquiran College is committed to providing a
+                    quality and learner-centered institution that
+                    develops competent and future-ready graduates.
+                </p>
+
+                <p>
+                    The college also promotes relevant research and
+                    innovation and engages in responsive community
+                    service and partnership.
+                </p>
+
+                <a href="about.html" class="read-more">
+                    Learn More About Us →
+                </a>
+
+            </div>
+
+
+            <div class="welcome-image">
+
+                <img
+                    src="campus.jpg"
+                    alt="HGBaquiran College Campus"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     QUICK STATS
+======================================== -->
+
+<section class="stats-section">
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-number">
+                10+
+            </div>
 
             <p>
-                Find the information you need.
+                Academic Programs
             </p>
 
         </div>
 
 
-        <div class="quick-grid">
+        <div class="stat-card">
+
+            <div class="stat-number">
+                5
+            </div>
+
+            <p>
+                Academic Areas
+            </p>
+
+        </div>
 
 
-            <div class="quick-card">
+        <div class="stat-card">
 
-                <h3>Academic Programs</h3>
+            <div class="stat-number">
+                2005
+            </div>
+
+            <p>
+                Established
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     FEATURED PROGRAMS
+======================================== -->
+
+<section class="home-section">
+
+    <div class="home-container">
+
+        <div class="home-section-title">
+
+            <h2>
+                Explore Our Academic Programs
+            </h2>
+
+            <p>
+                Discover programs designed to develop knowledge,
+                skills, professionalism, and career readiness.
+            </p>
+
+        </div>
+
+
+        <div class="featured-programs">
+
+
+            <div class="featured-program-card">
+
+                <h3>
+                    Hospitality Management
+                </h3>
 
                 <p>
-                    Explore the academic programs offered
-                    by HGBaquiran College.
+                    Prepare for professional careers in the
+                    hospitality, tourism, and service industries.
                 </p>
 
-                <a href="programs.html">
-                    View Programs
+                <a href="bshm.html">
+                    View BSHM →
                 </a>
 
             </div>
 
 
-            <div class="quick-card">
+            <div class="featured-program-card">
 
-                <h3>Admissions</h3>
+                <h3>
+                    Information Technology
+                </h3>
 
                 <p>
-                    Learn about the admissions process and
-                    enrollment information.
+                    Develop technical knowledge and practical
+                    skills for today's digital environment.
                 </p>
 
-                <a href="admissions.html">
-                    Admissions
+                <a href="bsit.html">
+                    View BSIT →
                 </a>
 
             </div>
 
 
-            <div class="quick-card">
+            <div class="featured-program-card">
 
-                <h3>News & Events</h3>
+                <h3>
+                    Business Administration
+                </h3>
 
                 <p>
-                    Stay updated with college news,
-                    announcements, and activities.
+                    Build business knowledge and professional
+                    skills for today's competitive workplace.
                 </p>
 
-                <a href="news.html">
-                    View News
+                <a href="bsba-fm.html">
+                    View BSBA →
                 </a>
 
             </div>
@@ -174,15 +690,37 @@
 
         </div>
 
-    </section>
+
+        <div style="text-align:center; margin-top:30px;">
+
+            <a href="programs.html" class="read-more">
+                View All Academic Programs →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- MISSION AND VISION -->
-    <section class="container">
+<!-- ========================================
+     MISSION & VISION
+======================================== -->
 
-        <div class="section-title">
+<section class="home-section" style="background:#f5f9ff;">
 
-            <h2>Our Mission & Vision</h2>
+    <div class="home-container">
+
+        <div class="home-section-title">
+
+            <h2>
+                Our Mission & Vision
+            </h2>
+
+            <p>
+                The guiding principles that shape HGBaquiran College.
+            </p>
 
         </div>
 
@@ -192,7 +730,9 @@
 
             <div class="mv-card">
 
-                <h3>Mission</h3>
+                <h3>
+                    Mission
+                </h3>
 
                 <p>
                     HGBaquiran College is committed to providing
@@ -205,7 +745,9 @@
 
             <div class="mv-card">
 
-                <h3>Vision</h3>
+                <h3>
+                    Vision
+                </h3>
 
                 <p>
                     HGBaquiran College is one of the leading private
@@ -219,35 +761,127 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- CTA -->
-    <section class="container">
+<!-- ========================================
+     EXPLORE
+======================================== -->
 
-        <div class="cta">
+<section class="home-section">
 
-            <h2>Discover Your Future</h2>
+    <div class="home-container">
+
+        <div class="home-section-title">
+
+            <h2>
+                Explore HGBaquiran College
+            </h2>
 
             <p>
-                Explore our programs and learn more about
-                HGBaquiran College.
+                Find the information you need about our college.
             </p>
-
-            <a href="programs.html" class="btn btn-primary">
-                Explore Programs
-            </a>
 
         </div>
 
-    </section>
+
+        <div class="quick-grid">
 
 
-    <!-- FOOTER -->
-    
+            <div class="quick-card">
+
+                <h3>
+                    Academic Programs
+                </h3>
+
+                <p>
+                    Explore the programs offered by
+                    HGBaquiran College.
+                </p>
+
+                <a href="programs.html">
+                    View Programs →
+                </a>
+
+            </div>
+
+
+            <div class="quick-card">
+
+                <h3>
+                    Admissions
+                </h3>
+
+                <p>
+                    Learn about admissions, enrollment,
+                    and how to begin your college journey.
+                </p>
+
+                <a href="admissions.html">
+                    Admissions →
+                </a>
+
+            </div>
+
+
+            <div class="quick-card">
+
+                <h3>
+                    Faculty & Staff
+                </h3>
+
+                <p>
+                    Meet the college leaders, program chairs,
+                    and staff of HGBaquiran College.
+                </p>
+
+                <a href="faculty-staff.html">
+                    Meet Our Team →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     CALL TO ACTION
+======================================== -->
+
+<section class="home-cta">
+
+    <h2>
+        Discover Your Future at HGBaquiran College
+    </h2>
+
+    <p>
+        Explore our academic programs and take the next step
+        toward your educational and professional goals.
+    </p>
+
+    <a href="programs.html" class="btn">
+        Explore Our Programs
+    </a>
+
+</section>
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
 <footer>
 
-    <h3>HGBaquiran College</h3>
+    <h3>
+        HGBaquiran College
+    </h3>
 
     <p>
         © 2026 HGBaquiran College. All Rights Reserved.
@@ -255,10 +889,20 @@
 
 </footer>
 
+
+<!-- MOBILE MENU -->
+
 <script>
-    function toggleMenu() {
-        document.getElementById("mainNav").classList.toggle("show");
-    }
+
+function toggleMenu() {
+
+    document
+        .getElementById("mainNav")
+        .classList
+        .toggle("show");
+
+}
+
 </script>
 
 </body>
