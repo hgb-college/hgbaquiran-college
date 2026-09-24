@@ -7,349 +7,513 @@
     <title>Faculty & Staff | HGBaquiran College</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* PAGE HERO */
+        .staff-hero {
+            background: linear-gradient(135deg, #063b78, #0b5ca8);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .staff-hero h2 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .staff-hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        /* STAFF SECTION */
+        .staff-section {
+            padding: 60px 20px;
+        }
+
+        .staff-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            color: #063b78;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* LEADERSHIP */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 70px;
+        }
+
+        /* STAFF GRID */
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* CARD */
+        .staff-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 1px solid #e0eaf5;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .staff-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #063b78;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0, 59, 120, 0.14);
+        }
+
+        /* PROFILE PLACEHOLDER */
+        .staff-photo {
+            width: 115px;
+            height: 115px;
+            margin: 10px auto 22px;
+            border-radius: 50%;
+            background: #eaf4ff;
+            border: 5px solid #d7e9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #063b78;
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        .staff-card h3 {
+            color: #063b78;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .staff-position {
+            color: #0b5ca8;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .staff-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* FEATURED LEADERS */
+        .leader-card {
+            border-top: 6px solid #063b78;
+        }
+
+        .leader-card .staff-photo {
+            width: 130px;
+            height: 130px;
+            font-size: 46px;
+        }
+
+        /* CTA */
+        .staff-cta {
+            background: #f5f9ff;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 20px;
+        }
+
+        .staff-cta h2 {
+            color: #063b78;
+            margin-bottom: 12px;
+        }
+
+        .staff-cta p {
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto 25px;
+            line-height: 1.7;
+        }
+
+        .staff-cta a {
+            display: inline-block;
+            background: #063b78;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .staff-cta a:hover {
+            background: #0b5ca8;
+            transform: translateY(-2px);
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .leadership-grid,
+            .staff-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .staff-hero h2 {
+                font-size: 32px;
+            }
+
+            .leadership-grid,
+            .staff-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .staff-section {
+                padding: 45px 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
+<header>
+    <div class="logo-area">
+        <img src="logo.png" alt="HGBaquiran College Logo">
 
-        <div class="logo-area">
-            <img src="logo.png" alt="HGBaquiran College Logo">
-
-            <div>
-                <h1>HGBaquiran College</h1>
-                <p>Excellence • Innovation • Transformation</p>
-            </div>
-        </div>
-
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-        <nav id="mainNav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li>
-                    <a href="faculty-staff.html" class="active">
-                        Faculty & Staff
-                    </a>
-                </li>
-                <li><a href="admissions.html">Admissions</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-
-    <!-- HERO -->
-    <section class="hero">
         <div>
-            <h2>Faculty & Staff</h2>
-
-            <p>
-                Meet the administrators, program chairs, and staff
-                of HGBaquiran College.
-            </p>
+            <h1>HGBaquiran College</h1>
+            <p>Excellence • Innovation • Transformation</p>
         </div>
-    </section>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="mainNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="faculty-staff.html" class="active">Faculty & Staff</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
 
-    <!-- MAIN CONTENT -->
-    <main class="container">
+<!-- HERO -->
 
-        <!-- INTRODUCTION -->
+<section class="staff-hero">
+    <h2>Faculty & Staff</h2>
+
+    <p>
+        Meet the dedicated leaders, academic professionals, and staff
+        members who contribute to the mission and continuing development
+        of HGBaquiran College.
+    </p>
+</section>
+
+
+<!-- LEADERSHIP -->
+
+<section class="staff-section">
+
+    <div class="staff-container">
+
         <div class="section-title">
-            <h2>Our Faculty & Staff</h2>
-
+            <h2>College Leadership</h2>
             <p>
-                HGBaquiran College is supported by dedicated administrators,
-                academic leaders, and staff who contribute to the college's
-                mission of excellence, innovation, and transformation.
+                Our institutional leaders provide direction and support
+                for the academic and administrative operations of the college.
             </p>
         </div>
 
 
-        <!-- ADMINISTRATION -->
-        <section class="staff-section">
+        <div class="leadership-grid">
 
-            <div class="staff-section-header">
-                <span class="section-label">College Leadership</span>
-                <h2>Administration</h2>
+            <!-- CEO -->
+
+            <div class="staff-card leader-card">
+
+                <div class="staff-photo">
+                    HB
+                </div>
+
+                <h3>Honorato Guzman Baquiran</h3>
+
+                <div class="staff-position">
+                    Chief Executive Officer
+                </div>
+
+                <p>
+                    Provides executive leadership and strategic direction
+                    for the institution.
+                </p>
+
             </div>
 
 
-            <div class="staff-grid leadership-grid">
+            <!-- PRESIDENT -->
 
-                <!-- CEO -->
-                <div class="staff-card leadership-card">
+            <div class="staff-card leader-card">
 
-                    <div class="staff-photo">
-                        <span>CEO</span>
-                    </div>
-
-                    <div class="staff-info">
-
-                        <span class="staff-role">
-                            Chief Executive Officer
-                        </span>
-
-                        <h3>
-                            HONORATO GUZMAN BAQUIRAN
-                        </h3>
-
-                    </div>
-
+                <div class="staff-photo">
+                    JM
                 </div>
 
+                <h3>Dr. Juliet S. Moises</h3>
 
-                <!-- PRESIDENT -->
-                <div class="staff-card leadership-card">
-
-                    <div class="staff-photo">
-                        <span>President</span>
-                    </div>
-
-                    <div class="staff-info">
-
-                        <span class="staff-role">
-                            College President
-                        </span>
-
-                        <h3>
-                            Dr. Juliet S. Moises
-                        </h3>
-
-                    </div>
-
+                <div class="staff-position">
+                    College President
                 </div>
 
-
-                <!-- VPAA -->
-                <div class="staff-card leadership-card">
-
-                    <div class="staff-photo">
-                        <span>VPAA</span>
-                    </div>
-
-                    <div class="staff-info">
-
-                        <span class="staff-role">
-                            Vice President for Academic Affairs
-                        </span>
-
-                        <h3>
-                            Dr. Vilma G. Navarro
-                        </h3>
-
-                    </div>
-
-                </div>
+                <p>
+                    Leads the college in pursuing its academic mission,
+                    institutional goals, and educational objectives.
+                </p>
 
             </div>
 
-        </section>
+
+            <!-- VPAA -->
+
+            <div class="staff-card leader-card">
+
+                <div class="staff-photo">
+                    VN
+                </div>
+
+                <h3>Dr. Vilma G. Navarro</h3>
+
+                <div class="staff-position">
+                    Vice President for Academic Affairs
+                </div>
+
+                <p>
+                    Oversees academic affairs and supports the quality
+                    and development of academic programs.
+                </p>
+
+            </div>
+
+        </div>
 
 
         <!-- PROGRAM CHAIRS -->
-        <section class="staff-section">
 
-            <div class="staff-section-header">
-                <span class="section-label">Academic Leadership</span>
-                <h2>Program Chairs</h2>
-            </div>
+        <div class="section-title">
 
-
-            <div class="staff-grid">
-
-                <!-- BSHM -->
-                <div class="staff-card">
-
-                    <div class="staff-photo">
-                        <span>BSHM</span>
-                    </div>
-
-                    <div class="staff-info">
-
-                        <span class="staff-role">
-                            BSHM Program Chair
-                        </span>
-
-                        <h3>
-                            Jahalan Gazzingan, MSHM
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <!-- BSIT -->
-                <div class="staff-card">
-
-                    <div class="staff-photo">
-                        <span>BSIT</span>
-                    </div>
-
-                    <div class="staff-info">
-
-                        <span class="staff-role">
-                            BSIT Program Chair
-                        </span>
-
-                        <h3>
-                            Raffy Melegrito
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <!-- BSBA -->
-                <div class="staff-card">
-
-                    <div class="staff-photo">
-                        <span>BSBA</span>
-                    </div>
-
-                    <div class="staff-info">
-
-                        <span class="staff-role">
-                            BSBA Program Chair
-                        </span>
-
-                        <h3>
-                            Jackelyn Tamang-Benusa, MBA
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <!-- BSCRIM -->
-                <div class="staff-card">
-
-                    <div class="staff-photo">
-                        <span>BSCRIM</span>
-                    </div>
-
-                    <div class="staff-info">
-
-                        <span class="staff-role">
-                            BSCRIM Program Chair
-                        </span>
-
-                        <h3>
-                            Jackilou Patrono, RCrim
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                <!-- BSED -->
-                <div class="staff-card">
-
-                    <div class="staff-photo">
-                        <span>BSED</span>
-                    </div>
-
-                    <div class="staff-info">
-
-                        <span class="staff-role">
-                            BSED Program Chair
-                        </span>
-
-                        <h3>
-                            Bryan Ambre
-                        </h3>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ADMINISTRATIVE STAFF -->
-        <section class="staff-section">
-
-            <div class="staff-section-header">
-                <span class="section-label">Administrative Support</span>
-                <h2>Administrative Staff</h2>
-            </div>
-
-
-            <div class="staff-grid staff-grid-single">
-
-                <!-- HR -->
-                <div class="staff-card">
-
-                    <div class="staff-photo">
-                        <span>HR</span>
-                    </div>
-
-                    <div class="staff-info">
-
-                        <span class="staff-role">
-                            Human Resources
-                        </span>
-
-                        <h3>
-                            Jessa Lorraine Lanag, MBA
-                        </h3>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- INFORMATION -->
-        <section class="info-box">
-
-            <h2>Faculty & Staff Information</h2>
+            <h2>Program Chairs & Staff</h2>
 
             <p>
-                Additional faculty and staff information, including
-                departments, offices, and photographs, may be added
-                to this page as official information becomes available.
+                Our academic and administrative personnel support students,
+                programs, and the daily operations of HGBaquiran College.
             </p>
 
-        </section>
-
-    </main>
+        </div>
 
 
-    <!-- FOOTER -->
-    <footer>
+        <div class="staff-grid">
 
-        <h3>HGBaquiran College</h3>
+            <!-- BSHM -->
 
-        <p>
-            © 2026 HGBaquiran College. All Rights Reserved.
-        </p>
+            <div class="staff-card">
 
-    </footer>
+                <div class="staff-photo">
+                    JG
+                </div>
+
+                <h3>Jahalan Gazzingan, MSHM</h3>
+
+                <div class="staff-position">
+                    BSHM Program Chair
+                </div>
+
+                <p>
+                    Hospitality Management program leadership and academic coordination.
+                </p>
+
+            </div>
 
 
-    <!-- MOBILE MENU -->
-    <script>
-        function toggleMenu() {
-            document.getElementById("mainNav").classList.toggle("show");
-        }
-    </script>
+            <!-- BSIT -->
+
+            <div class="staff-card">
+
+                <div class="staff-photo">
+                    RM
+                </div>
+
+                <h3>Raffy Melegrito</h3>
+
+                <div class="staff-position">
+                    BSIT Program Chair
+                </div>
+
+                <p>
+                    Information Technology program leadership and academic coordination.
+                </p>
+
+            </div>
+
+
+            <!-- BSBA -->
+
+            <div class="staff-card">
+
+                <div class="staff-photo">
+                    JT
+                </div>
+
+                <h3>Jackelyn Tamang-Benusa, MBA</h3>
+
+                <div class="staff-position">
+                    BSBA Program Chair
+                </div>
+
+                <p>
+                    Business Administration program leadership and academic coordination.
+                </p>
+
+            </div>
+
+
+            <!-- BSCRIM -->
+
+            <div class="staff-card">
+
+                <div class="staff-photo">
+                    JP
+                </div>
+
+                <h3>Jackilou Patrono, RCrim</h3>
+
+                <div class="staff-position">
+                    BSCRIM Program Chair
+                </div>
+
+                <p>
+                    Criminology program leadership and academic coordination.
+                </p>
+
+            </div>
+
+
+            <!-- BSED -->
+
+            <div class="staff-card">
+
+                <div class="staff-photo">
+                    BA
+                </div>
+
+                <h3>Bryan Ambre</h3>
+
+                <div class="staff-position">
+                    BSED Program Chair
+                </div>
+
+                <p>
+                    Secondary Education program leadership and academic coordination.
+                </p>
+
+            </div>
+
+
+            <!-- HR -->
+
+            <div class="staff-card">
+
+                <div class="staff-photo">
+                    JL
+                </div>
+
+                <h3>Jessa Lorraine Lanag, MBA</h3>
+
+                <div class="staff-position">
+                    Human Resources
+                </div>
+
+                <p>
+                    Supports personnel administration and human resource operations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="staff-cta">
+
+    <h2>Interested in HGBaquiran College?</h2>
+
+    <p>
+        Explore our academic programs and discover opportunities
+        for your educational journey.
+    </p>
+
+    <a href="programs.html">Explore Our Programs</a>
+
+</section>
+
+
+<footer>
+
+    <h3>HGBaquiran College</h3>
+
+    <p>
+        © 2026 HGBaquiran College. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
