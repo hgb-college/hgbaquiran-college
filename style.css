@@ -1665,7 +1665,11 @@ footer p {
     .logo-divider {
         height: 35px;
     }
-
+.program-card-logo {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 20px;
+}
 
     /* GENERAL */
 
@@ -1926,6 +1930,10 @@ footer p {
     .details-box {
         padding: 22px;
     }
+   .program-card-logo {
+    width: 110px;
+    height: 110px;
+}
 }
 /* CLICKABLE PROGRAM CARDS */
 
