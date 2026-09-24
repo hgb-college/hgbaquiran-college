@@ -8,12 +8,267 @@
     <title>About Us | HGBaquiran College</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ==============================
+           ABOUT PAGE
+        ============================== */
+
+        .about-intro {
+            padding: 70px 0 30px;
+            background: #ffffff;
+        }
+
+        .about-intro-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-intro-content h2 {
+            color: #063b78;
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .about-intro-content p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* MISSION & VISION */
+
+        .mission-vision {
+            padding: 50px 0 80px;
+            background: #f5f9ff;
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .mission-card,
+        .vision-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid #dfeaf5;
+            box-shadow: 0 8px 25px rgba(0, 59, 120, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-card::before,
+        .vision-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #063b78;
+        }
+
+        .mission-card h2,
+        .vision-card h2 {
+            color: #063b78;
+            font-size: 28px;
+            margin-bottom: 22px;
+        }
+
+        .mission-card p,
+        .vision-card p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .mission-card ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .mission-card li {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .mission-card strong,
+        .vision-card strong {
+            color: #063b78;
+        }
+
+
+        /* CORE VALUES */
+
+        .core-values-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .values-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: #063b78;
+            background: #e8f2ff;
+            padding: 7px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            color: #063b78;
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .values-subtitle {
+            color: #777;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 6px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .value {
+            background: #f8fbff;
+            border: 1px solid #dfeaf5;
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .value:hover {
+            transform: translateY(-6px);
+            border-color: #b9d4f2;
+            box-shadow: 0 12px 30px rgba(0, 59, 120, 0.10);
+        }
+
+        .value-letter {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #063b78;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 6px 15px rgba(6, 59, 120, 0.18);
+        }
+
+        .value h3 {
+            color: #063b78;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .value p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .about-intro {
+                padding: 50px 0 20px;
+            }
+
+            .about-intro-content h2 {
+                font-size: 27px;
+            }
+
+            .about-intro-content p {
+                font-size: 16px;
+            }
+
+            .mission-vision {
+                padding: 35px 0 60px;
+            }
+
+            .mission-card,
+            .vision-card {
+                padding: 28px 22px;
+            }
+
+            .mission-card h2,
+            .vision-card h2 {
+                font-size: 25px;
+            }
+
+            .core-values-section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value {
+                padding: 28px 22px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
 
-<!-- HEADER -->
+<!-- ==============================
+     HEADER
+============================== -->
 
 <header>
 
@@ -35,25 +290,55 @@
 
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-<nav id="mainNav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="faculty-staff.html">Faculty & Staff</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+
+        <nav id="mainNav">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html" class="active">About Us</a>
+                </li>
+
+                <li>
+                    <a href="programs.html">Programs</a>
+                </li>
+
+                <li>
+                    <a href="faculty-staff.html">Faculty & Staff</a>
+                </li>
+
+                <li>
+                    <a href="admissions.html">Admissions</a>
+                </li>
+
+                <li>
+                    <a href="news.html">News</a>
+                </li>
+
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
 
     </div>
 
 </header>
 
 
-<!-- PAGE TITLE -->
+<!-- ==============================
+     PAGE HERO
+============================== -->
 
 <section class="page-hero">
 
@@ -62,7 +347,7 @@
         <h1>About HGBaquiran College</h1>
 
         <p>
-            Mission, Vision, and Core Values
+            Discover our Mission, Vision, and Core Values
         </p>
 
     </div>
@@ -70,7 +355,37 @@
 </section>
 
 
-<!-- MISSION & VISION -->
+<!-- ==============================
+     INTRODUCTION
+============================== -->
+
+<section class="about-intro">
+
+    <div class="container">
+
+        <div class="about-intro-content">
+
+            <h2>Our Institutional Foundation</h2>
+
+            <p>
+                HGBaquiran College is committed to providing
+                quality and learner-centered education while
+                developing competent and future-ready graduates.
+                Guided by our Mission, Vision, and Core Values,
+                we strive to contribute to academic excellence,
+                innovation, and meaningful community engagement.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     MISSION & VISION
+============================== -->
 
 <section class="mission-vision">
 
@@ -81,11 +396,11 @@
 
             <!-- MISSION -->
 
-            <div class="card">
+            <div class="mission-card">
 
                 <h2>Mission</h2>
 
-                <p style="margin-bottom:20px;">
+                <p>
                     HGBaquiran College is committed to:
                 </p>
 
@@ -116,11 +431,11 @@
 
             <!-- VISION -->
 
-            <div class="card">
+            <div class="vision-card">
 
                 <h2>Vision</h2>
 
-                <p style="font-size:18px; line-height:1.8;">
+                <p>
 
                     HGBaquiran College is one of the leading
                     private institutions in the Cagayan Valley
@@ -132,6 +447,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -139,11 +455,14 @@
 </section>
 
 
-<!-- CORE VALUES -->
+<!-- ==============================
+     CORE VALUES
+============================== -->
 
-<section>
+<section class="core-values-section">
 
     <div class="container">
+
 
         <div class="values-header">
 
@@ -165,9 +484,13 @@
         <div class="values-grid">
 
 
+            <!-- E -->
+
             <div class="value">
 
-                <div class="value-letter">E</div>
+                <div class="value-letter">
+                    E
+                </div>
 
                 <h3>Excellence</h3>
 
@@ -179,11 +502,15 @@
             </div>
 
 
+            <!-- X -->
+
             <div class="value">
 
-                <div class="value-letter">X</div>
+                <div class="value-letter">
+                    X
+                </div>
 
-                <h3>eXcellence in Character</h3>
+                <h3>e-Xcellence in character</h3>
 
                 <p>
                     We uphold integrity and ethical behavior.
@@ -192,9 +519,13 @@
             </div>
 
 
+            <!-- C -->
+
             <div class="value">
 
-                <div class="value-letter">C</div>
+                <div class="value-letter">
+                    C
+                </div>
 
                 <h3>Commitment</h3>
 
@@ -206,9 +537,13 @@
             </div>
 
 
+            <!-- E -->
+
             <div class="value">
 
-                <div class="value-letter">E</div>
+                <div class="value-letter">
+                    E
+                </div>
 
                 <h3>Engagement</h3>
 
@@ -220,23 +555,31 @@
             </div>
 
 
+            <!-- L -->
+
             <div class="value">
 
-                <div class="value-letter">L</div>
+                <div class="value-letter">
+                    L
+                </div>
 
                 <h3>Leadership</h3>
 
                 <p>
-                    We develop leaders who created positive
-                    change.
+                    We develop leaders who create positive
+                    changes.
                 </p>
 
             </div>
 
 
+            <!-- S -->
+
             <div class="value">
 
-                <div class="value-letter">S</div>
+                <div class="value-letter">
+                    S
+                </div>
 
                 <h3>Stewardship</h3>
 
@@ -255,7 +598,9 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- ==============================
+     FOOTER
+============================== -->
 
 <footer>
 
@@ -272,11 +617,23 @@
     </div>
 
 </footer>
+
+
+<!-- MOBILE MENU -->
+
 <script>
-    function toggleMenu() {
-        document.getElementById("mainNav").classList.toggle("show");
-    }
+
+function toggleMenu() {
+
+    document
+        .getElementById("mainNav")
+        .classList
+        .toggle("show");
+
+}
+
 </script>
+
 
 </body>
 
