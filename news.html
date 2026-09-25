@@ -50,7 +50,7 @@
 
 
         /* ==============================
-           NEWS GRID
+           NEWS SECTION
         ============================== */
 
         .news-section {
@@ -64,15 +64,21 @@
             gap: 28px;
         }
 
+
+        /* ==============================
+           NEWS CARD
+        ============================== */
+
         .news-card {
             background: #ffffff;
             border: 1px solid #dfeaf5;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
 
             display: flex;
             flex-direction: column;
+
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
 
             transition:
                 transform 0.3s ease,
@@ -88,11 +94,11 @@
 
 
         /* ==============================
-           NEWS IMAGE / ICON AREA
+           NEWS HEADER
         ============================== */
 
         .news-image {
-            height: 190px;
+            height: 175px;
 
             background: linear-gradient(
                 135deg,
@@ -106,13 +112,28 @@
             align-items: center;
             justify-content: center;
 
-            font-size: 65px;
-
             position: relative;
+        }
+
+        .news-icon {
+            width: 72px;
+            height: 72px;
+
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 32px;
+
+            background: rgba(255, 255, 255, 0.12);
         }
 
         .news-image::after {
             content: "";
+
             position: absolute;
             bottom: 0;
             left: 0;
@@ -168,18 +189,18 @@
             font-size: 15px;
             line-height: 1.75;
 
-            margin-bottom: 0;
+            margin-bottom: 18px;
         }
 
 
         /* ==============================
-           NEWS NOTE
+           NEWS STATUS
         ============================== */
 
-        .news-note {
-            margin-top: 18px;
+        .news-status {
+            margin-top: auto;
 
-            padding: 12px 15px;
+            padding: 11px 14px;
 
             background: #f5f9ff;
 
@@ -191,9 +212,60 @@
             line-height: 1.6;
         }
 
+        .news-status strong {
+            display: block;
+
+            color: #063b78;
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 3px;
+        }
+
 
         /* ==============================
-           STAY CONNECTED
+           INFORMATION BOX
+        ============================== */
+
+        .news-information {
+            margin-top: 35px;
+
+            padding: 35px;
+
+            background: #f5f9ff;
+
+            border: 1px solid #dfeaf5;
+
+            border-radius: 16px;
+
+            text-align: center;
+        }
+
+        .news-information h2 {
+            color: #063b78;
+
+            font-size: 27px;
+
+            margin-bottom: 12px;
+        }
+
+        .news-information p {
+            max-width: 720px;
+
+            margin: 0 auto;
+
+            color: #555;
+
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           CTA
         ============================== */
 
         .news-cta {
@@ -288,7 +360,11 @@
             }
 
             .news-image {
-                height: 175px;
+                height: 165px;
+            }
+
+            .news-information {
+                padding: 28px 20px;
             }
 
             .news-cta {
@@ -337,6 +413,7 @@
         <button
             class="menu-toggle"
             onclick="toggleMenu()"
+            aria-label="Open navigation menu"
         >
             ☰
         </button>
@@ -469,7 +546,11 @@
             <article class="news-card">
 
                 <div class="news-image">
-                    📰
+
+                    <div class="news-icon">
+                        📰
+                    </div>
+
                 </div>
 
                 <div class="news-content">
@@ -485,12 +566,18 @@
                     <p>
                         Official announcements and important
                         information from HGBaquiran College
-                        will be published here.
+                        will be published in this section.
                     </p>
 
-                    <div class="news-note">
-                        Official college updates will be added
+                    <div class="news-status">
+
+                        <strong>
+                            Status
+                        </strong>
+
+                        Official updates will be added
                         as announcements are released.
+
                     </div>
 
                 </div>
@@ -503,7 +590,11 @@
             <article class="news-card">
 
                 <div class="news-image">
-                    🎓
+
+                    <div class="news-icon">
+                        🎓
+                    </div>
+
                 </div>
 
                 <div class="news-content">
@@ -522,9 +613,15 @@
                         featured in this section.
                     </p>
 
-                    <div class="news-note">
-                        This section can highlight official
-                        academic information and activities.
+                    <div class="news-status">
+
+                        <strong>
+                            Status
+                        </strong>
+
+                        Official academic information
+                        will be posted when available.
+
                     </div>
 
                 </div>
@@ -537,7 +634,11 @@
             <article class="news-card">
 
                 <div class="news-image">
-                    📢
+
+                    <div class="news-icon">
+                        📢
+                    </div>
+
                 </div>
 
                 <div class="news-content">
@@ -556,15 +657,42 @@
                         College community can be posted here.
                     </p>
 
-                    <div class="news-note">
-                        Check this page regularly for official
+                    <div class="news-status">
+
+                        <strong>
+                            Status
+                        </strong>
+
+                        Check this page for official
                         notices and announcements.
+
                     </div>
 
                 </div>
 
             </article>
 
+
+        </div>
+
+
+        <!-- ==============================
+             INFORMATION
+        ============================== -->
+
+        <div class="news-information">
+
+            <h2>
+                Official College Updates
+            </h2>
+
+            <p>
+                This page is intended for official
+                HGBaquiran College news, announcements,
+                academic updates, and important notices.
+                New information can be added here as it
+                becomes available.
+            </p>
 
         </div>
 
@@ -637,3 +765,4 @@ function toggleMenu() {
 </body>
 
 </html>
+
