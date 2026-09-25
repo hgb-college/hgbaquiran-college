@@ -1601,51 +1601,133 @@ nav ul li a.active {
     font-style: italic;
 }
 
-
-/* =========================================================
+/* ==============================
    FOOTER
-   ========================================================= */
+============================== */
 
 footer {
     background: #032d5b;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 28px 15px;
-
+    color: #ffffff;
     margin-top: 60px;
 }
 
-footer h3 {
-    margin-bottom: 5px;
-}
-
-footer p {
-    font-size: 14px;
-
-    opacity: 0.9;
-}
-
 .footer-content {
-    margin-top: 0;
-    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.2fr;
+    gap: 45px;
+    padding: 55px 0 40px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 18px;
 }
 
 .footer-title {
-    font-size: 20px;
-
+    color: #ffffff;
+    font-size: 22px;
     font-weight: bold;
+    margin-bottom: 15px;
+}
 
-    margin-bottom: 5px;
+.footer-description {
+    color: #dcecff;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 300px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 9px;
+}
+
+.footer-links a {
+    color: #dcecff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-contact {
+    color: #dcecff;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-contact strong {
+    color: #ffffff;
+}
+
+.footer-hours {
+    color: #dcecff;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px 15px;
+    text-align: center;
 }
 
 .footer-text {
-    font-size: 14px;
-
+    color: #dcecff;
+    font-size: 13px;
     opacity: 0.9;
 }
+
+
+/* ==============================
+   FOOTER RESPONSIVE
+============================== */
+
+@media (max-width: 850px) {
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 45px 20px 30px;
+        text-align: center;
+    }
+
+    .footer-description {
+        margin: 0 auto;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-contact,
+    .footer-hours {
+        text-align: center;
+    }
+
+}
+
 
 
 /* =========================================================
